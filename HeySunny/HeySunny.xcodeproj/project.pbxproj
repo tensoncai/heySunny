@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4520AA1344651B48AE57D36D /* Pods_HeySunnyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0567C6FE472B293A8C5D51 /* Pods_HeySunnyTests.framework */; };
+		4951B7E416B7A2D13D48A638 /* Pods_HeySunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */; };
 		5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6F824F047C500C58D1A /* AppDelegate.swift */; };
 		5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */; };
 		5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FC24F047C500C58D1A /* ViewController.swift */; };
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A9C33718CF412098E4CD9C5 /* Pods-HeySunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunny.release.xcconfig"; path = "Target Support Files/Pods-HeySunny/Pods-HeySunny.release.xcconfig"; sourceTree = "<group>"; };
 		5B75C6F524F047C500C58D1A /* HeySunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeySunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B75C6F824F047C500C58D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,11 @@
 		5B75C70B24F047C600C58D1A /* HeySunnyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeySunnyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B75C70F24F047C600C58D1A /* HeySunnyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeySunnyTests.swift; sourceTree = "<group>"; };
 		5B75C71124F047C600C58D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6499707947DB3613173C37F9 /* Pods-HeySunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunny.debug.xcconfig"; path = "Target Support Files/Pods-HeySunny/Pods-HeySunny.debug.xcconfig"; sourceTree = "<group>"; };
+		76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeySunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B14F1B7347BB155E125D963 /* Pods-HeySunnyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunnyTests.release.xcconfig"; path = "Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests.release.xcconfig"; sourceTree = "<group>"; };
+		8C0567C6FE472B293A8C5D51 /* Pods_HeySunnyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeySunnyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68B08F4FCDA857FED3FC6FA /* Pods-HeySunnyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunnyTests.debug.xcconfig"; path = "Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4951B7E416B7A2D13D48A638 /* Pods_HeySunny.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4520AA1344651B48AE57D36D /* Pods_HeySunnyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22659E42414A926BD0C857FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */,
+				8C0567C6FE472B293A8C5D51 /* Pods_HeySunnyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5B75C6EC24F047C500C58D1A = {
 			isa = PBXGroup;
 			children = (
 				5B75C6F724F047C500C58D1A /* HeySunny */,
 				5B75C70E24F047C600C58D1A /* HeySunnyTests */,
 				5B75C6F624F047C500C58D1A /* Products */,
+				CCA1CCAC56F33EE9D3560D58 /* Pods */,
+				22659E42414A926BD0C857FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +120,18 @@
 			path = HeySunnyTests;
 			sourceTree = "<group>";
 		};
+		CCA1CCAC56F33EE9D3560D58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6499707947DB3613173C37F9 /* Pods-HeySunny.debug.xcconfig */,
+				0A9C33718CF412098E4CD9C5 /* Pods-HeySunny.release.xcconfig */,
+				F68B08F4FCDA857FED3FC6FA /* Pods-HeySunnyTests.debug.xcconfig */,
+				8B14F1B7347BB155E125D963 /* Pods-HeySunnyTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +139,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B75C71424F047C600C58D1A /* Build configuration list for PBXNativeTarget "HeySunny" */;
 			buildPhases = (
+				DB0EB0E3CCB666633C168E7D /* [CP] Check Pods Manifest.lock */,
 				5B75C6F124F047C500C58D1A /* Sources */,
 				5B75C6F224F047C500C58D1A /* Frameworks */,
 				5B75C6F324F047C500C58D1A /* Resources */,
@@ -123,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B75C71724F047C600C58D1A /* Build configuration list for PBXNativeTarget "HeySunnyTests" */;
 			buildPhases = (
+				4B6EC014A2D2A956D052941B /* [CP] Check Pods Manifest.lock */,
 				5B75C70724F047C600C58D1A /* Sources */,
 				5B75C70824F047C600C58D1A /* Frameworks */,
 				5B75C70924F047C600C58D1A /* Resources */,
+				551327078DAFF54D71650614 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +230,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B6EC014A2D2A956D052941B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeySunnyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		551327078DAFF54D71650614 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB0EB0E3CCB666633C168E7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeySunny-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B75C6F124F047C500C58D1A /* Sources */ = {
@@ -360,6 +460,7 @@
 		};
 		5B75C71524F047C600C58D1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6499707947DB3613173C37F9 /* Pods-HeySunny.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,6 +480,7 @@
 		};
 		5B75C71624F047C600C58D1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9C33718CF412098E4CD9C5 /* Pods-HeySunny.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -398,6 +500,7 @@
 		};
 		5B75C71824F047C600C58D1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F68B08F4FCDA857FED3FC6FA /* Pods-HeySunnyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -420,6 +523,7 @@
 		};
 		5B75C71924F047C600C58D1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B14F1B7347BB155E125D963 /* Pods-HeySunnyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
