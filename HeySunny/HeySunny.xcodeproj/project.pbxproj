@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4520AA1344651B48AE57D36D /* Pods_HeySunnyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0567C6FE472B293A8C5D51 /* Pods_HeySunnyTests.framework */; };
 		4951B7E416B7A2D13D48A638 /* Pods_HeySunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */; };
+		5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7524F23A91003DC74D /* LessonCardView.swift */; };
+		5B5F8D7924F23AB6003DC74D /* LessonCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */; };
 		5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6F824F047C500C58D1A /* AppDelegate.swift */; };
 		5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */; };
 		5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FC24F047C500C58D1A /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		0A9C33718CF412098E4CD9C5 /* Pods-HeySunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunny.release.xcconfig"; path = "Target Support Files/Pods-HeySunny/Pods-HeySunny.release.xcconfig"; sourceTree = "<group>"; };
+		5B5F8D7524F23A91003DC74D /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
+		5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardViewModel.swift; sourceTree = "<group>"; };
 		5B75C6F524F047C500C58D1A /* HeySunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeySunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B75C6F824F047C500C58D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5B5F8D7324F23A6F003DC74D /* Daily Learning */ = {
+			isa = PBXGroup;
+			children = (
+				5B5F8D7724F23AAD003DC74D /* View Models */,
+				5B5F8D7424F23A86003DC74D /* Views */,
+			);
+			path = "Daily Learning";
+			sourceTree = "<group>";
+		};
+		5B5F8D7424F23A86003DC74D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B5F8D7524F23A91003DC74D /* LessonCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B5F8D7724F23AAD003DC74D /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		5B75C6EC24F047C500C58D1A = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +129,7 @@
 		5B75C6F724F047C500C58D1A /* HeySunny */ = {
 			isa = PBXGroup;
 			children = (
+				5B5F8D7324F23A6F003DC74D /* Daily Learning */,
 				5B75C6F824F047C500C58D1A /* AppDelegate.swift */,
 				5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */,
 				5B75C6FC24F047C500C58D1A /* ViewController.swift */,
@@ -128,7 +158,6 @@
 				F68B08F4FCDA857FED3FC6FA /* Pods-HeySunnyTests.debug.xcconfig */,
 				8B14F1B7347BB155E125D963 /* Pods-HeySunnyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -300,9 +329,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */,
 				5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */,
 				5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */,
 				5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */,
+				5B5F8D7924F23AB6003DC74D /* LessonCardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
