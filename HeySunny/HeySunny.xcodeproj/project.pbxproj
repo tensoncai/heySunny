@@ -11,6 +11,17 @@
 		4951B7E416B7A2D13D48A638 /* Pods_HeySunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */; };
 		5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7524F23A91003DC74D /* LessonCardView.swift */; };
 		5B5F8D7924F23AB6003DC74D /* LessonCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */; };
+		5B5F8D7B24F23ECD003DC74D /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7A24F23ECD003DC74D /* PlayButtonView.swift */; };
+		5B653E2324F2BDBD00E6AA21 /* HeySunnyFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E2224F2BDBD00E6AA21 /* HeySunnyFont.swift */; };
+		5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E2524F2BFB400E6AA21 /* TableViewHandler.swift */; };
+		5B653E2824F2C26B00E6AA21 /* LessonCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E2724F2C26B00E6AA21 /* LessonCardCell.swift */; };
+		5B653E2A24F3438F00E6AA21 /* DailyLearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E2924F3438F00E6AA21 /* DailyLearningView.swift */; };
+		5B653E2C24F348FB00E6AA21 /* RegularPlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E2B24F348FB00E6AA21 /* RegularPlayButtonView.swift */; };
+		5B653E2E24F3533400E6AA21 /* RetirementIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E2D24F3533400E6AA21 /* RetirementIconView.swift */; };
+		5B653E3224F3552E00E6AA21 /* FamilyPlanningIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E3124F3552E00E6AA21 /* FamilyPlanningIconView.swift */; };
+		5B653E3424F355FD00E6AA21 /* CreditCardIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E3324F355FD00E6AA21 /* CreditCardIconView.swift */; };
+		5B653E3624F3560900E6AA21 /* BudgetIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E3524F3560900E6AA21 /* BudgetIconView.swift */; };
+		5B653E3824F3561400E6AA21 /* InvestingIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E3724F3561400E6AA21 /* InvestingIconView.swift */; };
 		5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6F824F047C500C58D1A /* AppDelegate.swift */; };
 		5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */; };
 		5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FC24F047C500C58D1A /* ViewController.swift */; };
@@ -34,6 +45,17 @@
 		0A9C33718CF412098E4CD9C5 /* Pods-HeySunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunny.release.xcconfig"; path = "Target Support Files/Pods-HeySunny/Pods-HeySunny.release.xcconfig"; sourceTree = "<group>"; };
 		5B5F8D7524F23A91003DC74D /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
 		5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardViewModel.swift; sourceTree = "<group>"; };
+		5B5F8D7A24F23ECD003DC74D /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
+		5B653E2224F2BDBD00E6AA21 /* HeySunnyFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeySunnyFont.swift; sourceTree = "<group>"; };
+		5B653E2524F2BFB400E6AA21 /* TableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHandler.swift; sourceTree = "<group>"; };
+		5B653E2724F2C26B00E6AA21 /* LessonCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardCell.swift; sourceTree = "<group>"; };
+		5B653E2924F3438F00E6AA21 /* DailyLearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLearningView.swift; sourceTree = "<group>"; };
+		5B653E2B24F348FB00E6AA21 /* RegularPlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularPlayButtonView.swift; sourceTree = "<group>"; };
+		5B653E2D24F3533400E6AA21 /* RetirementIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetirementIconView.swift; sourceTree = "<group>"; };
+		5B653E3124F3552E00E6AA21 /* FamilyPlanningIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPlanningIconView.swift; sourceTree = "<group>"; };
+		5B653E3324F355FD00E6AA21 /* CreditCardIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardIconView.swift; sourceTree = "<group>"; };
+		5B653E3524F3560900E6AA21 /* BudgetIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetIconView.swift; sourceTree = "<group>"; };
+		5B653E3724F3561400E6AA21 /* InvestingIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingIconView.swift; sourceTree = "<group>"; };
 		5B75C6F524F047C500C58D1A /* HeySunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeySunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B75C6F824F047C500C58D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +106,7 @@
 		5B5F8D7324F23A6F003DC74D /* Daily Learning */ = {
 			isa = PBXGroup;
 			children = (
+				5B653E2424F2BFAC00E6AA21 /* Helpers */,
 				5B5F8D7724F23AAD003DC74D /* View Models */,
 				5B5F8D7424F23A86003DC74D /* Views */,
 			);
@@ -93,7 +116,11 @@
 		5B5F8D7424F23A86003DC74D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B653E3024F3550500E6AA21 /* Play Buttons */,
+				5B653E2F24F354F600E6AA21 /* Images */,
 				5B5F8D7524F23A91003DC74D /* LessonCardView.swift */,
+				5B653E2724F2C26B00E6AA21 /* LessonCardCell.swift */,
+				5B653E2924F3438F00E6AA21 /* DailyLearningView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,6 +131,43 @@
 				5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		5B653E1F24F2BC4900E6AA21 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5B653E2224F2BDBD00E6AA21 /* HeySunnyFont.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5B653E2424F2BFAC00E6AA21 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5B653E2524F2BFB400E6AA21 /* TableViewHandler.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5B653E2F24F354F600E6AA21 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5B653E2D24F3533400E6AA21 /* RetirementIconView.swift */,
+				5B653E3124F3552E00E6AA21 /* FamilyPlanningIconView.swift */,
+				5B653E3324F355FD00E6AA21 /* CreditCardIconView.swift */,
+				5B653E3524F3560900E6AA21 /* BudgetIconView.swift */,
+				5B653E3724F3561400E6AA21 /* InvestingIconView.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		5B653E3024F3550500E6AA21 /* Play Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				5B5F8D7A24F23ECD003DC74D /* PlayButtonView.swift */,
+				5B653E2B24F348FB00E6AA21 /* RegularPlayButtonView.swift */,
+			);
+			path = "Play Buttons";
 			sourceTree = "<group>";
 		};
 		5B75C6EC24F047C500C58D1A = {
@@ -129,6 +193,7 @@
 		5B75C6F724F047C500C58D1A /* HeySunny */ = {
 			isa = PBXGroup;
 			children = (
+				5B653E1F24F2BC4900E6AA21 /* Helpers */,
 				5B5F8D7324F23A6F003DC74D /* Daily Learning */,
 				5B75C6F824F047C500C58D1A /* AppDelegate.swift */,
 				5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */,
@@ -329,10 +394,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B653E2A24F3438F00E6AA21 /* DailyLearningView.swift in Sources */,
+				5B653E2824F2C26B00E6AA21 /* LessonCardCell.swift in Sources */,
+				5B5F8D7B24F23ECD003DC74D /* PlayButtonView.swift in Sources */,
+				5B653E3224F3552E00E6AA21 /* FamilyPlanningIconView.swift in Sources */,
 				5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */,
+				5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */,
+				5B653E3424F355FD00E6AA21 /* CreditCardIconView.swift in Sources */,
 				5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */,
+				5B653E2E24F3533400E6AA21 /* RetirementIconView.swift in Sources */,
+				5B653E2324F2BDBD00E6AA21 /* HeySunnyFont.swift in Sources */,
 				5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */,
 				5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */,
+				5B653E2C24F348FB00E6AA21 /* RegularPlayButtonView.swift in Sources */,
+				5B653E3824F3561400E6AA21 /* InvestingIconView.swift in Sources */,
+				5B653E3624F3560900E6AA21 /* BudgetIconView.swift in Sources */,
 				5B5F8D7924F23AB6003DC74D /* LessonCardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

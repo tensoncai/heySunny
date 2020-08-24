@@ -11,17 +11,17 @@ import UIKit
 class LessonCardView: UIView {
     let titleLabel: UILabel
     let levelLabel: UILabel
-    let playButtonImage: UIImageView
-    let lessonImage: UIImageView
+    let playButton: PlayButtonView
+    var lessonImage: UIView!
     
     init(using viewModel: LessonCardViewModel) {
         titleLabel = Self.makeLabel(withText: viewModel.title)
         levelLabel = Self.makeLabel(withText: viewModel.level)
-        playButtonImage = UIImageView(image: UIImage(named: viewModel.playButtonImageString))
-        lessonImage = UIImageView(image: UIImage(named: viewModel.lessonImageString))
+        playButton = PlayButtonView()
 
         super.init(frame: .zero)
         
+        lessonImage = viewModel.image
         setup()
     }
     
@@ -36,8 +36,12 @@ class LessonCardView: UIView {
     
     private func setupView() {
         self.backgroundColor = .white
+        playButton.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(playButton)
+        
         setupRoundedCorners()
         setupDropShadow()
+        setupImageView()
         setupLabels()
     }
     
@@ -47,7 +51,17 @@ class LessonCardView: UIView {
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 18),
             levelLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 18),
             levelLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
-        ])
+            
+            playButton.heightAnchor.constraint(equalToConstant: 50),
+            playButton.widthAnchor.constraint(equalToConstant: 50),
+            playButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 18),
+            playButton.topAnchor.constraint(equalTo: levelLabel.bottomAnchor, constant: 25),
+            
+            lessonImage.bottomAnchor.constraint(equalTo: bottomAnchor),
+            lessonImage.trailingAnchor.constraint(equalTo: trailingAnchor),
+            lessonImage.widthAnchor.constraint(equalToConstant: 179),
+            lessonImage.heightAnchor.constraint(equalToConstant: 163),
+        ])    
     }
 }
 
@@ -74,10 +88,18 @@ extension LessonCardView {
     
     private static func makeLabel(withText text: String) -> UILabel {
         let label = UILabel(frame: .zero)
+        
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "Avenir-Heavy", size: 16)
+        label.font = HeySunnyFont.section.font
         label.text = text
         
         return label
+    }
+    
+    // MARK: - Image
+    private func setupImageView() {
+        lessonImage.translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(lessonImage)
     }
 }
