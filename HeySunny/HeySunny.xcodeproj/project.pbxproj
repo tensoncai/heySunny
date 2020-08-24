@@ -29,6 +29,9 @@
 		5B75C70224F047C600C58D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B75C70124F047C600C58D1A /* Assets.xcassets */; };
 		5B75C70524F047C600C58D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B75C70324F047C600C58D1A /* LaunchScreen.storyboard */; };
 		5B75C71024F047C600C58D1A /* HeySunnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C70F24F047C600C58D1A /* HeySunnyTests.swift */; };
+		DC066ABE24F38883002F5348 /* TransferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC066ABD24F38883002F5348 /* TransferVC.swift */; };
+		DC066AC024F38892002F5348 /* TradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC066ABF24F38892002F5348 /* TradeVC.swift */; };
+		DC51F6B924F386FB000B0322 /* SummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC51F6B824F386FB000B0322 /* SummaryVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,11 @@
 		76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeySunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B14F1B7347BB155E125D963 /* Pods-HeySunnyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunnyTests.release.xcconfig"; path = "Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C0567C6FE472B293A8C5D51 /* Pods_HeySunnyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeySunnyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC066ABD24F38883002F5348 /* TransferVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferVC.swift; sourceTree = "<group>"; };
+		DC066ABF24F38892002F5348 /* TradeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeVC.swift; sourceTree = "<group>"; };
+		DC51F6B424F385C1000B0322 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC51F6B824F386FB000B0322 /* SummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryVC.swift; sourceTree = "<group>"; };
+		DC51F6BA24F3872A000B0322 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F68B08F4FCDA857FED3FC6FA /* Pods-HeySunnyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunnyTests.debug.xcconfig"; path = "Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +105,8 @@
 		22659E42414A926BD0C857FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC51F6BA24F3872A000B0322 /* Charts.framework */,
+				DC51F6B424F385C1000B0322 /* Charts.framework */,
 				76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */,
 				8C0567C6FE472B293A8C5D51 /* Pods_HeySunnyTests.framework */,
 			);
@@ -202,6 +212,9 @@
 				5B75C70124F047C600C58D1A /* Assets.xcassets */,
 				5B75C70324F047C600C58D1A /* LaunchScreen.storyboard */,
 				5B75C70624F047C600C58D1A /* Info.plist */,
+				DC51F6B824F386FB000B0322 /* SummaryVC.swift */,
+				DC066ABD24F38883002F5348 /* TransferVC.swift */,
+				DC066ABF24F38892002F5348 /* TradeVC.swift */,
 			);
 			path = HeySunny;
 			sourceTree = "<group>";
@@ -237,6 +250,7 @@
 				5B75C6F124F047C500C58D1A /* Sources */,
 				5B75C6F224F047C500C58D1A /* Frameworks */,
 				5B75C6F324F047C500C58D1A /* Resources */,
+				5142FF727713279A56F48CF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -348,6 +362,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5142FF727713279A56F48CF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeySunny/Pods-HeySunny-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeySunny/Pods-HeySunny-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeySunny/Pods-HeySunny-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		551327078DAFF54D71650614 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,8 +429,11 @@
 				5B653E2824F2C26B00E6AA21 /* LessonCardCell.swift in Sources */,
 				5B5F8D7B24F23ECD003DC74D /* PlayButtonView.swift in Sources */,
 				5B653E3224F3552E00E6AA21 /* FamilyPlanningIconView.swift in Sources */,
+				DC51F6B924F386FB000B0322 /* SummaryVC.swift in Sources */,
 				5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */,
 				5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */,
+				DC066AC024F38892002F5348 /* TradeVC.swift in Sources */,
+				DC066ABE24F38883002F5348 /* TransferVC.swift in Sources */,
 				5B653E3424F355FD00E6AA21 /* CreditCardIconView.swift in Sources */,
 				5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */,
 				5B653E2E24F3533400E6AA21 /* RetirementIconView.swift in Sources */,

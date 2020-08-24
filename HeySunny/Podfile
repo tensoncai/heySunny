@@ -6,10 +6,12 @@ target 'HeySunny' do
   use_frameworks!
 
   # Pods for HeySunny
-
+  
+  pod 'Charts'
+  
   target 'HeySunnyTests' do
     inherit! :search_paths
-    pod 'Charts'
+    
     pod 'XCoordinator'
     # Pods for testing
   end
