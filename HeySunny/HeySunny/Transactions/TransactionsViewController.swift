@@ -10,8 +10,6 @@ import UIKit
 import UPCarouselFlowLayout
 
 class TransactionsViewController: UIViewController {
-
-    @IBOutlet weak var bankCardCarouselFlowLayout: UPCarouselFlowLayout!
     
     private var usecase = TransactionUsecase()
     

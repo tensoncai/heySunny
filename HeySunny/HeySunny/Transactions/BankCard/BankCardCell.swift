@@ -15,6 +15,7 @@ class BankCardCell: UICollectionViewCell {
     @IBOutlet weak var lblAmount: UILabel!
     @IBOutlet weak var imgAutopayCheckbox: UIImageView!
     @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblLastFour: UILabel!
     
     func setup(bankCard: BankCard) {
         if let logo = bankCard.logo {
@@ -27,6 +28,7 @@ class BankCardCell: UICollectionViewCell {
         if bankCard.autoPayEnrolled == false {
             imgAutopayCheckbox.image = UIImage(named: "AutoPayUnchecked")
         }
+        lblLastFour.text = bankCard.creditCardLastFour
         imgBackground.image = UIImage(named: bankCard.background)
     }
 }

@@ -11,5 +11,6 @@ struct BankCard {
     var logo: String? // Image url
     var autoPayEnrolled: Bool
     var date: String
+    var creditCardLastFour: String
     var background: String // Image url
 }
