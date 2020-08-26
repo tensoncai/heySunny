@@ -23,6 +23,7 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
     // MARK: Stored properties
     
     private let learnRouter: StrongRouter<LearningRoute>
+    private
     
     // MARK: Initialization
     
