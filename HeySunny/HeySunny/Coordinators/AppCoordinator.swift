@@ -24,23 +24,53 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
     
     private let learnRouter: StrongRouter<LearningRoute>
     private let transactionsRouter: StrongRouter<TransactionsRoute>
+    private let homeRouter: StrongRouter<HomeRoute>
+    private let goalsRouter: StrongRouter<GoalsRoute>
+    private let investRouter: StrongRouter<InvestingRoute>
     
     // MARK: Initialization
     
     convenience init() {
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: HeySunnyFont.navigation.font!], for: .normal)
+        UITabBar.appearance().tintColor = UIColor(red: 97/255, green: 108/255, blue: 218/255, alpha: 1)
+        
         let learningCoordinator = LearningCoordinator()
-        learningCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 0)
+        learningCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Learn", icon: .learn, tag: 0)
 
         let transactionsCoordinator = TransactionsCoordinator()
-        transactionsCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 1)
+        transactionsCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Transact", icon: .transaction, tag: 1)
         
-        self.init(learnRouter: learningCoordinator.strongRouter, transactionsRouter: transactionsCoordinator.strongRouter)
+        let homeCoordinator = HomeCoordinator()
+        homeCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Home", icon: .home, tag: 2)
+        
+        let goalsCoordinator = GoalsCoordinator()
+        goalsCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Goals", icon: .goals, tag: 3)
+        
+        let investCoordinator = InvestingCoordinator()
+        investCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Invest", icon: .invest, tag: 4)
+        
+        self.init(
+            learnRouter: learningCoordinator.strongRouter,
+            transactionsRouter: transactionsCoordinator.strongRouter,
+            homeRouter: homeCoordinator.strongRouter,
+            goalsRouter: goalsCoordinator.strongRouter,
+            investRouter: investCoordinator.strongRouter)
     }
     
-    init(learnRouter: StrongRouter<LearningRoute>, transactionsRouter: StrongRouter<TransactionsRoute>) {
+    init(
+        learnRouter: StrongRouter<LearningRoute>,
+        transactionsRouter: StrongRouter<TransactionsRoute>,
+        homeRouter: StrongRouter<HomeRoute>,
+        goalsRouter: StrongRouter<GoalsRoute>,
+        investRouter: StrongRouter<InvestingRoute>
+    ) {
         self.learnRouter = learnRouter
         self.transactionsRouter = transactionsRouter
-        super.init(tabs: [learnRouter, transactionsRouter], select: learnRouter)
+        self.homeRouter = homeRouter
+        self.goalsRouter = goalsRouter
+        self.investRouter = investRouter
+        
+        super.init(tabs: [learnRouter, transactionsRouter, homeRouter, goalsRouter, investRouter], select: learnRouter)
     }
     
     override func prepareTransition(for route: AppRoute) -> TabBarTransition {

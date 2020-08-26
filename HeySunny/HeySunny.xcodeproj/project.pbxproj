@@ -37,6 +37,10 @@
 		5BF2935B24F5F23200D13ACE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */; };
 		5BF2935D24F5F6F600D13ACE /* LearningCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */; };
 		5BF2935F24F6256400D13ACE /* DailyLearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935E24F6256400D13ACE /* DailyLearningViewController.swift */; };
+		5BF2936824F62F8100D13ACE /* InvestingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2936724F62F8100D13ACE /* InvestingCoordinator.swift */; };
+		5BF2936A24F62F8A00D13ACE /* GoalsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2936924F62F8A00D13ACE /* GoalsCoordinator.swift */; };
+		5BF2936C24F62F9A00D13ACE /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2936B24F62F9A00D13ACE /* HomeCoordinator.swift */; };
+		5BF2936E24F62FED00D13ACE /* HeySunnyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2936D24F62FED00D13ACE /* HeySunnyIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningCoordinator.swift; sourceTree = "<group>"; };
 		5BF2935E24F6256400D13ACE /* DailyLearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLearningViewController.swift; sourceTree = "<group>"; };
+		5BF2936724F62F8100D13ACE /* InvestingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingCoordinator.swift; sourceTree = "<group>"; };
+		5BF2936924F62F8A00D13ACE /* GoalsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsCoordinator.swift; sourceTree = "<group>"; };
+		5BF2936B24F62F9A00D13ACE /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		5BF2936D24F62FED00D13ACE /* HeySunnyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeySunnyIcon.swift; sourceTree = "<group>"; };
 		6499707947DB3613173C37F9 /* Pods-HeySunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunny.debug.xcconfig"; path = "Target Support Files/Pods-HeySunny/Pods-HeySunny.debug.xcconfig"; sourceTree = "<group>"; };
 		76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeySunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B14F1B7347BB155E125D963 /* Pods-HeySunnyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunnyTests.release.xcconfig"; path = "Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,12 +180,13 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
-		5B653E1F24F2BC4900E6AA21 /* Helpers */ = {
+		5B653E1F24F2BC4900E6AA21 /* UI Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				5B653E2224F2BDBD00E6AA21 /* HeySunnyFont.swift */,
+				5BF2936D24F62FED00D13ACE /* HeySunnyIcon.swift */,
 			);
-			path = Helpers;
+			path = "UI Helpers";
 			sourceTree = "<group>";
 		};
 		5B653E2424F2BFAC00E6AA21 /* Helpers */ = {
@@ -240,9 +249,12 @@
 		5B75C6F724F047C500C58D1A /* HeySunny */ = {
 			isa = PBXGroup;
 			children = (
+				5BF2936324F62F4000D13ACE /* Invest */,
+				5BF2936224F62F3D00D13ACE /* Goals */,
+				5BF2936124F62F3900D13ACE /* Home */,
 				47DAED0B24F6001E00E538DC /* Transactions */,
 				5BF2935924F5F21D00D13ACE /* Coordinators */,
-				5B653E1F24F2BC4900E6AA21 /* Helpers */,
+				5B653E1F24F2BC4900E6AA21 /* UI Helpers */,
 				5B5F8D7324F23A6F003DC74D /* Daily Learning */,
 				5B75C6F824F047C500C58D1A /* AppDelegate.swift */,
 				5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */,
@@ -275,6 +287,54 @@
 			isa = PBXGroup;
 			children = (
 				5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5BF2936124F62F3900D13ACE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936424F62F6400D13ACE /* Coordinators */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5BF2936224F62F3D00D13ACE /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936524F62F6A00D13ACE /* Coordinators */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		5BF2936324F62F4000D13ACE /* Invest */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936624F62F6F00D13ACE /* Coordinators */,
+			);
+			path = Invest;
+			sourceTree = "<group>";
+		};
+		5BF2936424F62F6400D13ACE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936B24F62F9A00D13ACE /* HomeCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5BF2936524F62F6A00D13ACE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936924F62F8A00D13ACE /* GoalsCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5BF2936624F62F6F00D13ACE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936724F62F8100D13ACE /* InvestingCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -477,22 +537,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				47DAED1324F628D400E538DC /* BankCardCell.swift in Sources */,
+				5BF2936824F62F8100D13ACE /* InvestingCoordinator.swift in Sources */,
 				5B653E2A24F3438F00E6AA21 /* DailyLearningView.swift in Sources */,
 				5B653E2824F2C26B00E6AA21 /* LessonCardCell.swift in Sources */,
 				5B5F8D7B24F23ECD003DC74D /* PlayButtonView.swift in Sources */,
 				5B653E3224F3552E00E6AA21 /* FamilyPlanningIconView.swift in Sources */,
 				5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */,
+				5BF2936C24F62F9A00D13ACE /* HomeCoordinator.swift in Sources */,
 				5BF2935B24F5F23200D13ACE /* AppCoordinator.swift in Sources */,
 				47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */,
 				47DAED1624F6348E00E538DC /* BankCard.swift in Sources */,
 				5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */,
 				5B653E3424F355FD00E6AA21 /* CreditCardIconView.swift in Sources */,
+				5BF2936A24F62F8A00D13ACE /* GoalsCoordinator.swift in Sources */,
 				5BF2935F24F6256400D13ACE /* DailyLearningViewController.swift in Sources */,
 				5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */,
 				5B653E2E24F3533400E6AA21 /* RetirementIconView.swift in Sources */,
 				5B653E2324F2BDBD00E6AA21 /* HeySunnyFont.swift in Sources */,
 				5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */,
 				47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */,
+				5BF2936E24F62FED00D13ACE /* HeySunnyIcon.swift in Sources */,
 				5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */,
 				47DAED1824F6353900E538DC /* TransactionUsecase.swift in Sources */,
 				5B653E2C24F348FB00E6AA21 /* RegularPlayButtonView.swift in Sources */,
