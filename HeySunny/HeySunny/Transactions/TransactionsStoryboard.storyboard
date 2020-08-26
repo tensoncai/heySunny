@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BXU-WC-jqw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--Transactions-->
         <scene sceneID="Zrv-e0-tUI">
             <objects>
-                <viewController title="Transactions" id="BXU-WC-jqw" customClass="TransactionsViewController" customModule="HeySunny" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TransactionsViewControllerId" title="Transactions" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BXU-WC-jqw" customClass="TransactionsViewController" customModule="HeySunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X2Y-Nf-ldP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,31 +107,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="tJI-P7-7tE"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="cVZ-3d-ZvY">
+                    <navigationItem key="navigationItem" title="Transactions" id="cVZ-3d-ZvY">
                         <barButtonItem key="rightBarButtonItem" image="SettingsIcon" id="FSx-xX-Ivg"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6w-K0-o1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="275.36231884057975" y="-326.11607142857139"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="nVs-Zq-ppl">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OkR-oB-Mxv" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yt4-uB-2ae">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BXU-WC-jqw" kind="relationship" relationship="rootViewController" id="C5V-xz-c6w"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wyz-P3-bdq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-634.78260869565224" y="-326.11607142857139"/>
         </scene>
     </scenes>
     <resources>

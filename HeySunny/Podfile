@@ -8,11 +8,13 @@ target 'HeySunny' do
   # Pods for HeySunny
   pod 'Charts'
   pod 'XCoordinator'
+  pod "UPCarouselFlowLayout"
 
   target 'HeySunnyTests' do
     inherit! :search_paths
     pod 'Charts'
     pod 'XCoordinator'
+    pod "UPCarouselFlowLayout"
     # Pods for testing
   end
 
