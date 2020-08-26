@@ -17,11 +17,22 @@ class BankCardCell: UICollectionViewCell {
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblLastFour: UILabel!
     
+    @IBOutlet weak var constraintHeightLogo: NSLayoutConstraint!
+    @IBOutlet weak var constraintWidthLogo: NSLayoutConstraint!
+    @IBOutlet weak var constraintLeadingBalance: NSLayoutConstraint!
+    
     func setup(bankCard: BankCard) {
         if let logo = bankCard.logo {
             imgLogo.image = UIImage(named: logo)
+            imgLogo.isHidden = false
+            constraintHeightLogo.constant = 30
+            constraintWidthLogo.constant = 29
+            constraintLeadingBalance.constant = 10
         } else {
-            imgLogo.removeFromSuperview()
+            imgLogo.isHidden = true
+            constraintHeightLogo.constant = 0
+            constraintWidthLogo.constant = 0
+            constraintLeadingBalance.constant = 0
         }
         lblAmount.text = String(format: "%.2f", bankCard.amount)
         lblDate.text = bankCard.date

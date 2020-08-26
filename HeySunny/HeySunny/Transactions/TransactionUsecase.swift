@@ -15,6 +15,9 @@ class TransactionUsecase {
     init() {
         // for demo
         bankCardsDataSource.append(BankCard.init(amount: 1209.80, logo: "ChaseLogo", autoPayEnrolled: false, date: "11/23", creditCardLastFour: "8921", background: "Credit"))
+        
         bankCardsDataSource.append(BankCard.init(amount: 500, logo: nil, autoPayEnrolled: false, date: "12/02", creditCardLastFour: "4206", background: "Credit"))
+        
+        bankCardsDataSource.append(BankCard.init(amount: 10000.44, logo: nil, autoPayEnrolled: false, date: "01/23", creditCardLastFour: "3823", background: "Credit"))
     }
 }
