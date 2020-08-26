@@ -61,12 +61,13 @@ class SummaryVC: UIViewController, ChartViewDelegate, UITableViewDelegate , UITa
         lineChart.legend.enabled = false
         lineChart.xAxis.drawLabelsEnabled = false
         lineChart.rightAxis.drawLabelsEnabled = false
-        
-        lineChart.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
+        lineChart.borderLineWidth = 2.0
+        lineChart.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
         
         var entries = [ChartDataEntry]()
-        for x in 0..<10 {
-            entries.append(ChartDataEntry(x: Double(x), y: Double(x)))
+        for x in 0..<100 {
+            let randomDouble = Double.random(in: 1...100)
+            entries.append(ChartDataEntry(x: Double(x), y: randomDouble))
         }
         
         let set = LineChartDataSet(entries: entries)
