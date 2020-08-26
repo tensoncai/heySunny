@@ -88,9 +88,24 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 
         return textField
     }()
+    
+    let submitTransfer: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Submit Transfer", for: .normal)
+        button.backgroundColor = UIColor(red: 0, green: 90/255, blue: 255/255, alpha: 1)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.layer.cornerRadius = 5.0
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 24)
+        button.addTarget(self, action: #selector(submitTransferAction(sender:)), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.addSubview(submitTransfer)
         
         setupStackView()
         
@@ -115,7 +130,8 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         fromBank.heightAnchor.constraint(equalToConstant: 40).isActive = true
         toBank.heightAnchor.constraint(equalToConstant: 40).isActive = true
         amount.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
+        amount.heightAnchor.constraint(equalToConstant: 40).isActive = true
+
         stackView.widthAnchor.constraint(equalToConstant: 320).isActive = true
         stackView.heightAnchor.constraint(equalToConstant: 300).isActive = true
         stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
@@ -123,10 +139,20 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         
         stackView.setCustomSpacing(40.0, after: fromBank)
         stackView.setCustomSpacing(40.0, after: toBank)
+        
+        submitTransfer.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        submitTransfer.widthAnchor.constraint(equalToConstant: 320).isActive = true
+        submitTransfer.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
+    }
+    
+    @objc func submitTransferAction(sender: UIButton!) {
+      print("Button tapped")
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        textField.text = ""
+        if (textField.text == "Enter an amount") {
+            textField.text = ""
+        }
         
         return true
     }
