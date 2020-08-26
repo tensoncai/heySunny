@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import UPCarouselFlowLayout
 
 class TransactionsViewController: UIViewController {
 
+    @IBOutlet weak var bankCardCarouselFlowLayout: UPCarouselFlowLayout!
+    
+    private var usecase = TransactionUsecase()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
@@ -27,4 +30,19 @@ class TransactionsViewController: UIViewController {
     }
     */
 
+}
+
+extension TransactionsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return usecase.bankCardsDataSource.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BankCardCell", for: indexPath) as! BankCardCell
+        
+        let bankCard = usecase.bankCardsDataSource[indexPath.row]
+        cell.setup(bankCard: bankCard)
+        
+        return cell
+    }
 }

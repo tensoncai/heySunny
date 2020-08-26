@@ -11,6 +11,9 @@
 		47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */; };
 		47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */; };
 		47DAED1124F6013D00E538DC /* TransactionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */; };
+		47DAED1324F628D400E538DC /* BankCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED1224F628D400E538DC /* BankCardCell.swift */; };
+		47DAED1624F6348E00E538DC /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED1524F6348E00E538DC /* BankCard.swift */; };
+		47DAED1824F6353900E538DC /* TransactionUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED1724F6353900E538DC /* TransactionUsecase.swift */; };
 		4951B7E416B7A2D13D48A638 /* Pods_HeySunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */; };
 		5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7524F23A91003DC74D /* LessonCardView.swift */; };
 		5B5F8D7924F23AB6003DC74D /* LessonCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */; };
@@ -51,6 +54,9 @@
 		47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
 		47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionsStoryboard.storyboard; sourceTree = "<group>"; };
+		47DAED1224F628D400E538DC /* BankCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardCell.swift; sourceTree = "<group>"; };
+		47DAED1524F6348E00E538DC /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
+		47DAED1724F6353900E538DC /* TransactionUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUsecase.swift; sourceTree = "<group>"; };
 		5B5F8D7524F23A91003DC74D /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
 		5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardViewModel.swift; sourceTree = "<group>"; };
 		5B5F8D7A24F23ECD003DC74D /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
@@ -116,11 +122,22 @@
 		47DAED0B24F6001E00E538DC /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
+				47DAED1424F6347400E538DC /* BankCard */,
 				47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */,
 				47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */,
 				47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */,
+				47DAED1724F6353900E538DC /* TransactionUsecase.swift */,
 			);
 			path = Transactions;
+			sourceTree = "<group>";
+		};
+		47DAED1424F6347400E538DC /* BankCard */ = {
+			isa = PBXGroup;
+			children = (
+				47DAED1224F628D400E538DC /* BankCardCell.swift */,
+				47DAED1524F6348E00E538DC /* BankCard.swift */,
+			);
+			path = BankCard;
 			sourceTree = "<group>";
 		};
 		5B5F8D7324F23A6F003DC74D /* Daily Learning */ = {
@@ -459,6 +476,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47DAED1324F628D400E538DC /* BankCardCell.swift in Sources */,
 				5B653E2A24F3438F00E6AA21 /* DailyLearningView.swift in Sources */,
 				5B653E2824F2C26B00E6AA21 /* LessonCardCell.swift in Sources */,
 				5B5F8D7B24F23ECD003DC74D /* PlayButtonView.swift in Sources */,
@@ -466,6 +484,7 @@
 				5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */,
 				5BF2935B24F5F23200D13ACE /* AppCoordinator.swift in Sources */,
 				47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */,
+				47DAED1624F6348E00E538DC /* BankCard.swift in Sources */,
 				5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */,
 				5B653E3424F355FD00E6AA21 /* CreditCardIconView.swift in Sources */,
 				5BF2935F24F6256400D13ACE /* DailyLearningViewController.swift in Sources */,
@@ -475,6 +494,7 @@
 				5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */,
 				47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */,
 				5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */,
+				47DAED1824F6353900E538DC /* TransactionUsecase.swift in Sources */,
 				5B653E2C24F348FB00E6AA21 /* RegularPlayButtonView.swift in Sources */,
 				5B653E3824F3561400E6AA21 /* InvestingIconView.swift in Sources */,
 				5BF2935D24F5F6F600D13ACE /* LearningCoordinator.swift in Sources */,
