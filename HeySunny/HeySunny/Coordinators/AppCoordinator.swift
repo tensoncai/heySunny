@@ -23,6 +23,7 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
     // MARK: Stored properties
     
     private let learnRouter: StrongRouter<LearningRoute>
+    private let transactionsRouter: StrongRouter<TransactionsRoute>
     
     // MARK: Initialization
     
@@ -30,13 +31,16 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
         let learningCoordinator = LearningCoordinator()
         learningCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 0)
 
-        self.init(learnRouter: learningCoordinator.strongRouter)
+        let transactionsCoordinator = TransactionsCoordinator()
+        transactionsCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 1)
+        
+        self.init(learnRouter: learningCoordinator.strongRouter, transactionsRouter: transactionsCoordinator.strongRouter)
     }
     
-    init(learnRouter: StrongRouter<LearningRoute>) {
+    init(learnRouter: StrongRouter<LearningRoute>, transactionsRouter: StrongRouter<TransactionsRoute>) {
         self.learnRouter = learnRouter
-
-        super.init(tabs: [learnRouter], select: learnRouter)
+        self.transactionsRouter = transactionsRouter
+        super.init(tabs: [learnRouter, transactionsRouter], select: learnRouter)
     }
     
     override func prepareTransition(for route: AppRoute) -> TabBarTransition {
@@ -44,7 +48,7 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
         case .learn:
             return .select(learnRouter)
         case .transact:
-            return .select(learnRouter)
+            return .select(transactionsRouter)
         case .home:
             return .select(learnRouter)
         case .goals:
