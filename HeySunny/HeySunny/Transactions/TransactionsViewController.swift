@@ -12,9 +12,13 @@ import UPCarouselFlowLayout
 class TransactionsViewController: UIViewController {
     
     private var usecase = TransactionUsecase()
+    @IBOutlet weak var tableViewBalanceItems: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableViewBalanceItems.dataSource = self
+        tableViewBalanceItems.delegate = self
     }
     
 
@@ -41,6 +45,23 @@ extension TransactionsViewController: UICollectionViewDataSource, UICollectionVi
         let bankCard = usecase.bankCardsDataSource[indexPath.row]
         cell.setup(bankCard: bankCard)
         
+        return cell
+    }
+}
+
+extension TransactionsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return usecase.balanceItemSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BalanceItemCell", for: indexPath) as! BalanceItemCell
+        
+        let balanceItem = usecase.balanceItemSource[indexPath.row]
+    
+        cell.setup(balanceItem: balanceItem)
         return cell
     }
 }

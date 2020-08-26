@@ -169,33 +169,39 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="159" translatesAutoresizingMaskIntoConstraints="NO" id="9Jj-XY-AXw">
-                                <rect key="frame" x="16" y="377" width="382" height="30"/>
+                                <rect key="frame" x="16" y="377" width="382" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxA-lO-zGp">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="29"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZv-Kp-R82">
-                                        <rect key="frame" x="253" y="0.0" width="129" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZv-Kp-R82">
+                                        <rect key="frame" x="220" y="0.0" width="162" height="36"/>
                                         <color key="backgroundColor" red="0.85251510139999997" green="0.41343185310000002" blue="0.33722555640000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Add Transaction">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="162" id="FAs-11-i6o"/>
+                                            <constraint firstAttribute="height" constant="36" id="Gxp-Pg-1rR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <state key="normal" title="Add Transaction" image="camera">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
+                                                <integer key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fmL-3j-Cj7">
-                                <rect key="frame" x="16" y="415" width="382" height="447"/>
+                                <rect key="frame" x="16" y="421" width="382" height="441"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NfP-46-dxw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BalanceItemCell" id="NfP-46-dxw" customClass="BalanceItemCell" customModule="HeySunny" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NfP-46-dxw" id="zdE-hn-8wA">
@@ -210,14 +216,14 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purchase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXQ-Gh-GYG">
-                                                    <rect key="frame" x="50" y="11.5" width="277" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="50" y="9.5" width="275.5" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTb-tu-8j7">
-                                                    <rect key="frame" x="343" y="11.5" width="39" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="341.5" y="9.5" width="40.5" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -232,6 +238,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="PTb-tu-8j7" secondAttribute="trailing" id="yr5-9f-MhO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img" destination="YcN-su-vYL" id="xcP-N0-qob"/>
+                                            <outlet property="lblPrice" destination="PTb-tu-8j7" id="yKR-4z-Y8x"/>
+                                            <outlet property="lblPurchase" destination="SXQ-Gh-GYG" id="i1R-fD-XMA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <userDefinedRuntimeAttributes>
@@ -264,6 +275,9 @@
                     <navigationItem key="navigationItem" title="Transactions" id="cVZ-3d-ZvY">
                         <barButtonItem key="rightBarButtonItem" image="SettingsIcon" id="FSx-xX-Ivg"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableViewBalanceItems" destination="fmL-3j-Cj7" id="weH-W4-gbZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M6w-K0-o1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,5 +288,6 @@
         <image name="CreditCardDots" width="110" height="13"/>
         <image name="Logo" width="128" height="128"/>
         <image name="SettingsIcon" width="31" height="31"/>
+        <image name="camera" width="28" height="21"/>
     </resources>
 </document>

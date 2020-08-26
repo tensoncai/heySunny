@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4520AA1344651B48AE57D36D /* Pods_HeySunnyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0567C6FE472B293A8C5D51 /* Pods_HeySunnyTests.framework */; };
+		478A69C524F6EFC50037AC70 /* BalanceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69C424F6EFC50037AC70 /* BalanceItem.swift */; };
+		478A69C724F6F6E70037AC70 /* BalanceItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69C624F6F6E70037AC70 /* BalanceItemCell.swift */; };
 		47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */; };
 		47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */; };
 		47DAED1124F6013D00E538DC /* TransactionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */; };
@@ -55,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		0A9C33718CF412098E4CD9C5 /* Pods-HeySunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunny.release.xcconfig"; path = "Target Support Files/Pods-HeySunny/Pods-HeySunny.release.xcconfig"; sourceTree = "<group>"; };
+		478A69C424F6EFC50037AC70 /* BalanceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceItem.swift; sourceTree = "<group>"; };
+		478A69C624F6F6E70037AC70 /* BalanceItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceItemCell.swift; sourceTree = "<group>"; };
 		47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
 		47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -127,9 +131,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		478A69C324F6EF6D0037AC70 /* BalanceItem */ = {
+			isa = PBXGroup;
+			children = (
+				478A69C424F6EFC50037AC70 /* BalanceItem.swift */,
+				478A69C624F6F6E70037AC70 /* BalanceItemCell.swift */,
+			);
+			path = BalanceItem;
+			sourceTree = "<group>";
+		};
 		47DAED0B24F6001E00E538DC /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
+				478A69C324F6EF6D0037AC70 /* BalanceItem */,
 				47DAED1424F6347400E538DC /* BankCard */,
 				47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */,
 				47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */,
@@ -549,11 +563,13 @@
 				47DAED1624F6348E00E538DC /* BankCard.swift in Sources */,
 				5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */,
 				5B653E3424F355FD00E6AA21 /* CreditCardIconView.swift in Sources */,
+				478A69C724F6F6E70037AC70 /* BalanceItemCell.swift in Sources */,
 				5BF2936A24F62F8A00D13ACE /* GoalsCoordinator.swift in Sources */,
 				5BF2935F24F6256400D13ACE /* DailyLearningViewController.swift in Sources */,
 				5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */,
 				5B653E2E24F3533400E6AA21 /* RetirementIconView.swift in Sources */,
 				5B653E2324F2BDBD00E6AA21 /* HeySunnyFont.swift in Sources */,
+				478A69C524F6EFC50037AC70 /* BalanceItem.swift in Sources */,
 				5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */,
 				47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */,
 				5BF2936E24F62FED00D13ACE /* HeySunnyIcon.swift in Sources */,
