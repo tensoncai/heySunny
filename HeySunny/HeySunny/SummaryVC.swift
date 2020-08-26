@@ -102,6 +102,8 @@ class SummaryVC: UIViewController, ChartViewDelegate, UITableViewDelegate , UITa
         stackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
 //        stackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -430).isActive = true
+        
+        stackView.setCustomSpacing(20, after: segmentedControl)
     }
     
     private func setupSegmentedControl() {
@@ -136,8 +138,42 @@ class SummaryVC: UIViewController, ChartViewDelegate, UITableViewDelegate , UITa
         return 7
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if (indexPath.row == 1 || indexPath.row == 3 || indexPath.row == 5) {
+          return 30
+    }
+
+       return UITableView.automaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        var cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        if (indexPath.row % 2 == 1) {
+            cell.backgroundColor = UIColor(red: 237/255, green: 237/255, blue: 237/255, alpha: 1)
+        
+        }
+        
+        if (indexPath.row % 2 == 0) {
+            cell.textLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
+           
+            if (indexPath.row > 1 && indexPath.row % 2 == 0) {
+                cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
+                cell.textLabel?.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 20)
+                cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+
+                if (indexPath.row == 2) {
+                    cell.detailTextLabel?.text = "$8,000"
+                }
+                else if (indexPath.row == 4) {
+                    cell.detailTextLabel?.text = "$6,000"
+                }
+                else if (indexPath.row == 6) {
+                    cell.detailTextLabel?.text = "$2,000"
+                }
+            }
+        }
+        
         cell.textLabel?.text = itemArray[indexPath.row]
         
         return cell
