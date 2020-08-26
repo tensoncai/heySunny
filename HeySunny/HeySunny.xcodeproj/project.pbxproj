@@ -237,6 +237,7 @@
 				5B75C6F124F047C500C58D1A /* Sources */,
 				5B75C6F224F047C500C58D1A /* Frameworks */,
 				5B75C6F324F047C500C58D1A /* Resources */,
+				4506F2E64DC3B0F1C50E0874 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,6 +327,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4506F2E64DC3B0F1C50E0874 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeySunny/Pods-HeySunny-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeySunny/Pods-HeySunny-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeySunny/Pods-HeySunny-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4B6EC014A2D2A956D052941B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
