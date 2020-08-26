@@ -33,6 +33,7 @@
 		5B75C71024F047C600C58D1A /* HeySunnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C70F24F047C600C58D1A /* HeySunnyTests.swift */; };
 		5BF2935B24F5F23200D13ACE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */; };
 		5BF2935D24F5F6F600D13ACE /* LearningCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */; };
+		5BF2935F24F6256400D13ACE /* DailyLearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935E24F6256400D13ACE /* DailyLearningViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		5B75C71124F047C600C58D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningCoordinator.swift; sourceTree = "<group>"; };
+		5BF2935E24F6256400D13ACE /* DailyLearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLearningViewController.swift; sourceTree = "<group>"; };
 		6499707947DB3613173C37F9 /* Pods-HeySunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunny.debug.xcconfig"; path = "Target Support Files/Pods-HeySunny/Pods-HeySunny.debug.xcconfig"; sourceTree = "<group>"; };
 		76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeySunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B14F1B7347BB155E125D963 /* Pods-HeySunnyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunnyTests.release.xcconfig"; path = "Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,8 @@
 		5B5F8D7324F23A6F003DC74D /* Daily Learning */ = {
 			isa = PBXGroup;
 			children = (
+				5BF2936024F6268700D13ACE /* Coordinators */,
+				5B653E3A24F36CC200E6AA21 /* View Controllers */,
 				5B653E2424F2BFAC00E6AA21 /* Helpers */,
 				5B5F8D7724F23AAD003DC74D /* View Models */,
 				5B5F8D7424F23A86003DC74D /* Views */,
@@ -188,6 +192,14 @@
 			path = "Play Buttons";
 			sourceTree = "<group>";
 		};
+		5B653E3A24F36CC200E6AA21 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2935E24F6256400D13ACE /* DailyLearningViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		5B75C6EC24F047C500C58D1A = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +250,13 @@
 			isa = PBXGroup;
 			children = (
 				5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5BF2936024F6268700D13ACE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
 				5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -449,6 +468,7 @@
 				47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */,
 				5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */,
 				5B653E3424F355FD00E6AA21 /* CreditCardIconView.swift in Sources */,
+				5BF2935F24F6256400D13ACE /* DailyLearningViewController.swift in Sources */,
 				5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */,
 				5B653E2E24F3533400E6AA21 /* RetirementIconView.swift in Sources */,
 				5B653E2324F2BDBD00E6AA21 /* HeySunnyFont.swift in Sources */,

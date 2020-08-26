@@ -183,7 +183,7 @@ class DailyLearningView: UIView {
     
     private func makeTableContainerViewConstraints() -> [NSLayoutConstraint] {
         let topAnchorConstraint = tableContainerView.topAnchor.constraint(equalTo: allLessonsLabel.bottomAnchor, constant: 25)
-        let bottomAnchorConstraint = tableContainerView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50)
+        let bottomAnchorConstraint = tableContainerView.bottomAnchor.constraint(equalTo: bottomAnchor)
         let leadingAnchorConstraint = tableContainerView.leadingAnchor.constraint(equalTo: leadingAnchor)
         let trailingAnchorConstraint = tableContainerView.trailingAnchor.constraint(equalTo: trailingAnchor)
         
