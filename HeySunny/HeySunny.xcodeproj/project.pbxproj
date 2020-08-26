@@ -25,10 +25,11 @@
 		5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6F824F047C500C58D1A /* AppDelegate.swift */; };
 		5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */; };
 		5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FC24F047C500C58D1A /* ViewController.swift */; };
-		5B75C70024F047C500C58D1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B75C6FE24F047C500C58D1A /* Main.storyboard */; };
 		5B75C70224F047C600C58D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B75C70124F047C600C58D1A /* Assets.xcassets */; };
 		5B75C70524F047C600C58D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B75C70324F047C600C58D1A /* LaunchScreen.storyboard */; };
 		5B75C71024F047C600C58D1A /* HeySunnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C70F24F047C600C58D1A /* HeySunnyTests.swift */; };
+		5BF2935B24F5F23200D13ACE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */; };
+		5BF2935D24F5F6F600D13ACE /* LearningCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,13 +61,14 @@
 		5B75C6F824F047C500C58D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5B75C6FC24F047C500C58D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5B75C6FF24F047C500C58D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B75C70124F047C600C58D1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B75C70424F047C600C58D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B75C70624F047C600C58D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B75C70B24F047C600C58D1A /* HeySunnyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeySunnyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B75C70F24F047C600C58D1A /* HeySunnyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeySunnyTests.swift; sourceTree = "<group>"; };
 		5B75C71124F047C600C58D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningCoordinator.swift; sourceTree = "<group>"; };
 		6499707947DB3613173C37F9 /* Pods-HeySunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunny.debug.xcconfig"; path = "Target Support Files/Pods-HeySunny/Pods-HeySunny.debug.xcconfig"; sourceTree = "<group>"; };
 		76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeySunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B14F1B7347BB155E125D963 /* Pods-HeySunnyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunnyTests.release.xcconfig"; path = "Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,12 +195,12 @@
 		5B75C6F724F047C500C58D1A /* HeySunny */ = {
 			isa = PBXGroup;
 			children = (
+				5BF2935924F5F21D00D13ACE /* Coordinators */,
 				5B653E1F24F2BC4900E6AA21 /* Helpers */,
 				5B5F8D7324F23A6F003DC74D /* Daily Learning */,
 				5B75C6F824F047C500C58D1A /* AppDelegate.swift */,
 				5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */,
 				5B75C6FC24F047C500C58D1A /* ViewController.swift */,
-				5B75C6FE24F047C500C58D1A /* Main.storyboard */,
 				5B75C70124F047C600C58D1A /* Assets.xcassets */,
 				5B75C70324F047C600C58D1A /* LaunchScreen.storyboard */,
 				5B75C70624F047C600C58D1A /* Info.plist */,
@@ -213,6 +215,15 @@
 				5B75C71124F047C600C58D1A /* Info.plist */,
 			);
 			path = HeySunnyTests;
+			sourceTree = "<group>";
+		};
+		5BF2935924F5F21D00D13ACE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */,
+				5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		CCA1CCAC56F33EE9D3560D58 /* Pods */ = {
@@ -313,7 +324,6 @@
 			files = (
 				5B75C70524F047C600C58D1A /* LaunchScreen.storyboard in Resources */,
 				5B75C70224F047C600C58D1A /* Assets.xcassets in Resources */,
-				5B75C70024F047C500C58D1A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +427,7 @@
 				5B5F8D7B24F23ECD003DC74D /* PlayButtonView.swift in Sources */,
 				5B653E3224F3552E00E6AA21 /* FamilyPlanningIconView.swift in Sources */,
 				5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */,
+				5BF2935B24F5F23200D13ACE /* AppCoordinator.swift in Sources */,
 				5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */,
 				5B653E3424F355FD00E6AA21 /* CreditCardIconView.swift in Sources */,
 				5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */,
@@ -426,6 +437,7 @@
 				5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */,
 				5B653E2C24F348FB00E6AA21 /* RegularPlayButtonView.swift in Sources */,
 				5B653E3824F3561400E6AA21 /* InvestingIconView.swift in Sources */,
+				5BF2935D24F5F6F600D13ACE /* LearningCoordinator.swift in Sources */,
 				5B653E3624F3560900E6AA21 /* BudgetIconView.swift in Sources */,
 				5B5F8D7924F23AB6003DC74D /* LessonCardViewModel.swift in Sources */,
 			);
@@ -450,14 +462,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5B75C6FE24F047C500C58D1A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B75C6FF24F047C500C58D1A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5B75C70324F047C600C58D1A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
