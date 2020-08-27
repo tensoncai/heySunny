@@ -169,7 +169,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9Jj-XY-AXw">
-                                <rect key="frame" x="32" y="377" width="350" height="40"/>
+                                <rect key="frame" x="32" y="377" width="350" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxA-lO-zGp">
                                         <rect key="frame" x="0.0" y="0.0" width="188" height="29"/>
@@ -198,13 +198,21 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tby-vd-Rp4">
-                                <rect key="frame" x="32" y="435" width="350" height="461"/>
+                                <rect key="frame" x="32" y="431" width="350" height="465"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="INp-V1-PE6">
-                                        <rect key="frame" x="20" y="20" width="310" height="441"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="INp-V1-PE6">
+                                        <rect key="frame" x="20" y="20" width="310" height="445"/>
                                         <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yiF-Ls-fE5">
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="32"/>
+                                                <segments>
+                                                    <segment title="Expense"/>
+                                                    <segment title="Income"/>
+                                                    <segment title="All"/>
+                                                </segments>
+                                            </segmentedControl>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fmL-3j-Cj7">
-                                                <rect key="frame" x="0.0" y="0.0" width="310" height="441"/>
+                                                <rect key="frame" x="0.0" y="53" width="310" height="392"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BalanceItemCell" id="NfP-46-dxw" customClass="BalanceItemCell" customModule="HeySunny" customModuleProvider="target">
@@ -303,6 +311,7 @@
                         <barButtonItem key="rightBarButtonItem" image="SettingsIcon" id="FSx-xX-Ivg"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="segmentedControlBalanceItems" destination="yiF-Ls-fE5" id="9Lu-fG-9jT"/>
                         <outlet property="tableViewBalanceItems" destination="fmL-3j-Cj7" id="weH-W4-gbZ"/>
                     </connections>
                 </viewController>

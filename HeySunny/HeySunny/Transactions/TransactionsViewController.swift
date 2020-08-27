@@ -13,15 +13,17 @@ class TransactionsViewController: UIViewController {
     
     private var usecase = TransactionUsecase()
     @IBOutlet weak var tableViewBalanceItems: UITableView!
+    @IBOutlet weak var segmentedControlBalanceItems: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableViewBalanceItems.dataSource = self
         tableViewBalanceItems.delegate = self
+        
+        formatSegmentedControls(segmentedControl: segmentedControlBalanceItems)
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -32,6 +34,19 @@ class TransactionsViewController: UIViewController {
     }
     */
 
+    // MARK: - private
+    private func formatSegmentedControls(segmentedControl: UISegmentedControl) {
+        
+        let normalColor = UIColor(red: 0.38, green: 0.424, blue: 0.855, alpha: 1)
+        let font = UIFont.init(name: "Avenir-Medium", size: 16)!
+        let normalAttribute: [NSAttributedString.Key : Any] = [.font : font, .foregroundColor : normalColor]
+        
+        let selectedColor = UIColor(red: 0.112, green: 0.112, blue: 0.112, alpha: 1)
+        let selectedAttribute: [NSAttributedString.Key : Any] = [.font : font, .foregroundColor : selectedColor]
+        
+        segmentedControl.setTitleTextAttributes(normalAttribute, for: .normal)
+        segmentedControl.setTitleTextAttributes(selectedAttribute, for: .selected)
+    }
 }
 
 extension TransactionsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
