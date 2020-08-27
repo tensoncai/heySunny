@@ -29,16 +29,19 @@ class TransactionsViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if let destinationVC = segue.destination as? ExpenseConfirmationViewController, let image = sender as? UIImage {
+            destinationVC.capturedImage = image
+        } else {
+            let alert = UIAlertController.getErrorAlert(title: "Could not confirm expense.", completion: nil)
+            present(alert, animated: true, completion: nil)
+        }
     }
-    */
-
+    
     // MARK: - Actions
     @IBAction func selectedBalanceItemType(_ sender: Any) {
         tableViewBalanceItems.reloadData()
@@ -114,6 +117,10 @@ extension TransactionsViewController: UITableViewDelegate, UITableViewDataSource
 extension TransactionsViewController: ImageScannerControllerDelegate {
     
     func imageScannerController(_ scanner: ImageScannerController, didFinishScanningWithResults results: ImageScannerResults) {
+        
+        scanner.dismiss(animated: true) { [weak self] in
+            self?.performSegue(withIdentifier: "ExpenseConfirmationSegue", sender: results.croppedScan.image)
+        }
     }
     
     func imageScannerControllerDidCancel(_ scanner: ImageScannerController) {
@@ -121,10 +128,10 @@ extension TransactionsViewController: ImageScannerControllerDelegate {
     }
     
     func imageScannerController(_ scanner: ImageScannerController, didFailWithError error: Error) {
-        let alertVC = UIAlertController.init(title: "Unknown error", message: "Please try again.", preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction.init(title: "OK", style: .default, handler: { [weak scanner]_ in
+        let alert = UIAlertController.getErrorAlert(title: "Unknown error") { [weak scanner]_ in
             scanner?.dismiss(animated: true, completion: nil)
-        }))
+        }
+        present(alert, animated: true)
     }
 }
 

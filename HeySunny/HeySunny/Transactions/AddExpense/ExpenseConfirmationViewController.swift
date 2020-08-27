@@ -11,7 +11,13 @@ import WeScan
 
 class ExpenseConfirmationViewController: UIViewController {
     
+    var capturedImage: UIImage?
+    
+    @IBOutlet weak var imgExpense: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imgExpense.image = capturedImage
     }
 }

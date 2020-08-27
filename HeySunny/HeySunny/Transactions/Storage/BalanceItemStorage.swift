@@ -8,6 +8,7 @@
 
 protocol BalanceItemStorage {
     func get() -> [BalanceItem]
+    func add(_ balanceItem: BalanceItem)
 }
 
 // for demo
@@ -27,5 +28,9 @@ class InMemoryBalanceItemStorage: BalanceItemStorage {
     
     func get() -> [BalanceItem] {
         return datasource
+    }
+    
+    func add(_ balanceItem: BalanceItem) {
+        datasource.append(balanceItem)
     }
 }

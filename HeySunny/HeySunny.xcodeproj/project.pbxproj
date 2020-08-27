@@ -14,6 +14,7 @@
 		478A69CD24F75FCE0037AC70 /* BankCardStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69CC24F75FCE0037AC70 /* BankCardStorage.swift */; };
 		478A69CF24F7624B0037AC70 /* StorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69CE24F7624B0037AC70 /* StorageFactory.swift */; };
 		478A69D124F762C50037AC70 /* BalanceItemStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69D024F762C50037AC70 /* BalanceItemStorage.swift */; };
+		478A69D524F776580037AC70 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69D424F776580037AC70 /* AlertHelper.swift */; };
 		47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */; };
 		47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */; };
 		47DAED1124F6013D00E538DC /* TransactionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */; };
@@ -67,6 +68,7 @@
 		478A69CC24F75FCE0037AC70 /* BankCardStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardStorage.swift; sourceTree = "<group>"; };
 		478A69CE24F7624B0037AC70 /* StorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageFactory.swift; sourceTree = "<group>"; };
 		478A69D024F762C50037AC70 /* BalanceItemStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceItemStorage.swift; sourceTree = "<group>"; };
+		478A69D424F776580037AC70 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
 		47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				5B653E2224F2BDBD00E6AA21 /* HeySunnyFont.swift */,
 				5BF2936D24F62FED00D13ACE /* HeySunnyIcon.swift */,
+				478A69D424F776580037AC70 /* AlertHelper.swift */,
 			);
 			path = "UI Helpers";
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				478A69CA24F758890037AC70 /* ExpenseConfirmationViewController.swift in Sources */,
 				478A69C724F6F6E70037AC70 /* BalanceItemCell.swift in Sources */,
 				5BF2936A24F62F8A00D13ACE /* GoalsCoordinator.swift in Sources */,
+				478A69D524F776580037AC70 /* AlertHelper.swift in Sources */,
 				5BF2935F24F6256400D13ACE /* DailyLearningViewController.swift in Sources */,
 				5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */,
 				5B653E2E24F3533400E6AA21 /* RetirementIconView.swift in Sources */,
