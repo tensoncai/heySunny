@@ -69,6 +69,7 @@ class ViewController: UIViewController {
         stackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         
         stackView.setCustomSpacing(15.0, after: header)
+        stackView.setCustomSpacing(15.0, after: segmentedControl)
     }
     
     private func setupSegmentedControl() {

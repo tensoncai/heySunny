@@ -113,6 +113,7 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         imageView.image = UIImage(named: "success")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = UIColor.clear
+        
         return imageView
     }()
     
@@ -196,7 +197,6 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     private func setConstraints() {
         fromBank.heightAnchor.constraint(equalToConstant: 40).isActive = true
         toBank.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        amount.heightAnchor.constraint(equalToConstant: 40).isActive = true
         amount.heightAnchor.constraint(equalToConstant: 40).isActive = true
 
         stackView.widthAnchor.constraint(equalToConstant: 320).isActive = true
