@@ -463,6 +463,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="actionAddTransaction:" destination="BXU-WC-jqw" eventType="touchUpInside" id="Whg-19-L1z"/>
+                                    <action selector="actionConfirmExpense:" destination="X7c-LC-y43" eventType="touchUpInside" id="ItD-dO-8sW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -481,6 +482,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="PEp-Tu-dAQ"/>
                     <connections>
+                        <outlet property="flAmount" destination="zdk-DW-i4O" id="D80-51-AcF"/>
+                        <outlet property="flDescription" destination="Fc1-cd-jej" id="uI9-MO-FBv"/>
                         <outlet property="imgExpense" destination="Of5-QO-3m4" id="yfr-NY-0hz"/>
                     </connections>
                 </viewController>

@@ -36,6 +36,7 @@ class TransactionsViewController: UIViewController {
         
         if let destinationVC = segue.destination as? ExpenseConfirmationViewController, let image = sender as? UIImage {
             destinationVC.capturedImage = image
+            destinationVC.delegate = self
         } else {
             let alert = UIAlertController.getErrorAlert(title: "Could not confirm expense.", completion: nil)
             present(alert, animated: true, completion: nil)
@@ -132,6 +133,13 @@ extension TransactionsViewController: ImageScannerControllerDelegate {
             scanner?.dismiss(animated: true, completion: nil)
         }
         present(alert, animated: true)
+    }
+}
+
+extension TransactionsViewController: AddExpenseDelegate {
+    func addedExpense(_ expense: BalanceItem) {
+        usecase.addExpense(expense)
+        tableViewBalanceItems.reloadData()
     }
 }
 
