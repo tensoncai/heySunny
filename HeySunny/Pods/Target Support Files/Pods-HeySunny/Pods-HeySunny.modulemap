@@ -1,6 +1,0 @@
-framework module Pods_HeySunny {
-  umbrella header "Pods-HeySunny-umbrella.h"
-
-  export *
-  module * { export * }
-}
