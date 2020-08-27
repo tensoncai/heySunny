@@ -11,6 +11,11 @@ import UIKit
 class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     var stackView = UIStackView()
+    var successView: UIView!
+    var dimView: UIView!
+    
+//    let image = UIImage(named: "success")
+//    var imageView: UIImageView!
     
     let fromPicker = UIPickerView()
     let toPicker = UIPickerView()
@@ -101,13 +106,37 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         
         return button
     }()
+    
+    let successImage: UIImageView = {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 200))
+        imageView.image = UIImage(named: "success")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.backgroundColor = UIColor.clear
+        return imageView
+    }()
+    
+    let backToInvestmentsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Back To Investments", for: .normal)
+        button.backgroundColor = UIColor(red: 255/255, green: 83/255, blue: 73/255, alpha: 1)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.layer.cornerRadius = 10
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        button.addTarget(self, action: #selector(backToInvestmentsAction(sender:)), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.addSubview(submitTransfer)
-        
         setupStackView()
+        self.view.addSubview(submitTransfer)
+        setupDimView()
+        setupSuccessView()
+        
+        setConstraints()
         
         fromPicker.delegate = self
         toPicker.delegate = self
@@ -116,6 +145,45 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         amount.delegate = self
         
         self.addDoneButtonOnKeyboard()
+        view.addSubview(successImage)
+        view.bringSubviewToFront(successImage)
+    }
+    
+    private func setupDimView() {
+        dimView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        dimView.backgroundColor = UIColor(red: 105/255, green: 105/255, blue: 105/255, alpha: 0.7)
+        dimView.isHidden = true
+        self.view.addSubview(dimView)
+    }
+    
+    private func setupSuccessView() {
+        successView = UIView(frame: CGRect(x: view.frame.width / 2 - 150, y: 40, width: 300, height: 420))
+        successView.backgroundColor = UIColor.white
+        successView.layer.cornerRadius = 20
+        successView.isHidden = true
+        
+        self.view.addSubview(successView)
+        
+        successImage.frame = CGRect(x: view.frame.width / 2 - 150, y: 40, width: 100, height: 200)
+//        successView.addSubview(successImage)
+//        successView.bringSubviewToFront(successImage)
+//        setSuccessImageConstraints()
+        
+        successView.addSubview(backToInvestmentsButton)
+        setBackToInvestmentsConstraints()
+    }
+    
+    private func setSuccessImageConstraints() {
+        
+        successImage.leadingAnchor.constraint(equalTo: successView.leadingAnchor).isActive = true
+        successImage.trailingAnchor.constraint(equalTo: successView.trailingAnchor).isActive = true
+        successImage.centerXAnchor.constraint(equalTo: successView.centerXAnchor).isActive = true
+    }
+    
+    private func setBackToInvestmentsConstraints() {
+        backToInvestmentsButton.widthAnchor.constraint(equalToConstant: 260).isActive = true
+        backToInvestmentsButton.centerXAnchor.constraint(equalTo: successView.centerXAnchor).isActive = true
+        backToInvestmentsButton.bottomAnchor.constraint(equalTo: successView.bottomAnchor, constant: -30).isActive = true
     }
     
     private func setupStackView() {
@@ -123,7 +191,6 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(stackView)
-        setConstraints()
     }
     
     private func setConstraints() {
@@ -146,7 +213,13 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     @objc func submitTransferAction(sender: UIButton!) {
-      print("Button tapped")
+        dimView.isHidden = false
+        successView.isHidden = false
+    }
+    
+    @objc func backToInvestmentsAction(sender: UIButton!) {
+        dimView.isHidden = true
+        successView.isHidden = true
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
