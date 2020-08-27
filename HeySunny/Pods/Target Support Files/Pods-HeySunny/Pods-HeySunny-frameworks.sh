@@ -198,12 +198,16 @@ fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Permission/Permission.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WeScan/WeScan.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XCoordinator/XCoordinator.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Permission/Permission.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WeScan/WeScan.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XCoordinator/XCoordinator.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

@@ -8,6 +8,8 @@
 
 import UIKit
 import UPCarouselFlowLayout
+import WeScan
+import Permission
 
 class TransactionsViewController: UIViewController {
     
@@ -22,6 +24,9 @@ class TransactionsViewController: UIViewController {
         tableViewBalanceItems.delegate = self
         
         formatSegmentedControls(segmentedControl: segmentedControlBalanceItems)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(actionTappedOutside(_:)))
+        view.addGestureRecognizer(tapGesture)
     }
     
     /*
@@ -37,6 +42,25 @@ class TransactionsViewController: UIViewController {
     // MARK: - Actions
     @IBAction func selectedBalanceItemType(_ sender: Any) {
         tableViewBalanceItems.reloadData()
+    }
+    
+    @IBAction func actionAddTransaction(_ sender: Any) {
+        
+        let permission: Permission = .camera
+        permission.request { [weak self] status in
+            switch status {
+            case .authorized:
+                let scannerViewController = ImageScannerController()
+                scannerViewController.imageScannerDelegate = self
+                self?.present(scannerViewController, animated: true)
+            default:
+                break
+            }
+        }
+    }
+    
+    @objc func actionTappedOutside(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
     // MARK: - private
@@ -84,6 +108,23 @@ extension TransactionsViewController: UITableViewDelegate, UITableViewDataSource
     
         cell.setup(balanceItem: balanceItem)
         return cell
+    }
+}
+
+extension TransactionsViewController: ImageScannerControllerDelegate {
+    
+    func imageScannerController(_ scanner: ImageScannerController, didFinishScanningWithResults results: ImageScannerResults) {
+    }
+    
+    func imageScannerControllerDidCancel(_ scanner: ImageScannerController) {
+        scanner.dismiss(animated: true, completion: nil)
+    }
+    
+    func imageScannerController(_ scanner: ImageScannerController, didFailWithError error: Error) {
+        let alertVC = UIAlertController.init(title: "Unknown error", message: "Please try again.", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction.init(title: "OK", style: .default, handler: { [weak scanner]_ in
+            scanner?.dismiss(animated: true, completion: nil)
+        }))
     }
 }
 
