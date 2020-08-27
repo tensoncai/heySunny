@@ -29,4 +29,9 @@ class TransactionUsecase {
         
         balanceItemSource.append(BalanceItem.init(image: "shopping-bag", balanceItem: "Sephora Cosmetics", price: 12.34, type: .expense))
     }
+    
+    func getBalanceItemSource(filterBy: BalanceType?) -> [BalanceItem] {
+        guard let filter = filterBy else { return balanceItemSource }
+        return balanceItemSource.filter { $0.type == filter }
+    }
 }

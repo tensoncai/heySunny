@@ -34,6 +34,11 @@ class TransactionsViewController: UIViewController {
     }
     */
 
+    // MARK: - Actions
+    @IBAction func selectedBalanceItemType(_ sender: Any) {
+        tableViewBalanceItems.reloadData()
+    }
+    
     // MARK: - private
     private func formatSegmentedControls(segmentedControl: UISegmentedControl) {
         
@@ -67,16 +72,34 @@ extension TransactionsViewController: UICollectionViewDataSource, UICollectionVi
 extension TransactionsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return usecase.balanceItemSource.count
+        
+        return usecase.getBalanceItemSource(filterBy: segmentedControlBalanceItems.getBalanceType()).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "BalanceItemCell", for: indexPath) as! BalanceItemCell
         
-        let balanceItem = usecase.balanceItemSource[indexPath.row]
+        let balanceItem = usecase.getBalanceItemSource(filterBy: segmentedControlBalanceItems.getBalanceType())[indexPath.row]
     
         cell.setup(balanceItem: balanceItem)
         return cell
+    }
+}
+
+fileprivate extension UISegmentedControl {
+    
+    func getBalanceType() -> BalanceType? {
+        var type: BalanceType?
+        switch selectedSegmentIndex {
+        case 0:
+            type = .expense
+        case 1:
+            type = .income
+        default:
+            type = nil
+        }
+        
+        return type
     }
 }

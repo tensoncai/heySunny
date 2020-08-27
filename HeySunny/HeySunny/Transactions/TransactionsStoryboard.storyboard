@@ -210,6 +210,9 @@
                                                     <segment title="Income"/>
                                                     <segment title="All"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="selectedBalanceItemType:" destination="BXU-WC-jqw" eventType="valueChanged" id="8Ei-Rj-sN6"/>
+                                                </connections>
                                             </segmentedControl>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fmL-3j-Cj7">
                                                 <rect key="frame" x="0.0" y="53" width="310" height="392"/>
