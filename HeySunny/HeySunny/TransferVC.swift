@@ -108,7 +108,8 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     }()
     
     let successImage: UIImageView = {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 200))
+        let imageView = UIImageView()
+        imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         imageView.image = UIImage(named: "success")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = UIColor.clear
@@ -145,8 +146,6 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         amount.delegate = self
         
         self.addDoneButtonOnKeyboard()
-        view.addSubview(successImage)
-        view.bringSubviewToFront(successImage)
     }
     
     private func setupDimView() {
@@ -157,33 +156,34 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     private func setupSuccessView() {
-        successView = UIView(frame: CGRect(x: view.frame.width / 2 - 150, y: 40, width: 300, height: 420))
+        successView = UIView(frame: CGRect(x: view.frame.width / 2 - 150, y: 40, width: 300, height: 510))
         successView.backgroundColor = UIColor.white
         successView.layer.cornerRadius = 20
         successView.isHidden = true
         
         self.view.addSubview(successView)
         
-        successImage.frame = CGRect(x: view.frame.width / 2 - 150, y: 40, width: 100, height: 200)
-//        successView.addSubview(successImage)
-//        successView.bringSubviewToFront(successImage)
-//        setSuccessImageConstraints()
-        
+        successView.addSubview(successImage)
+        successView.bringSubviewToFront(successImage)
         successView.addSubview(backToInvestmentsButton)
+        
         setBackToInvestmentsConstraints()
+        setSuccessImageConstraints()
     }
     
     private func setSuccessImageConstraints() {
         
-        successImage.leadingAnchor.constraint(equalTo: successView.leadingAnchor).isActive = true
-        successImage.trailingAnchor.constraint(equalTo: successView.trailingAnchor).isActive = true
+        successImage.topAnchor.constraint(equalTo: successView.topAnchor, constant: 10).isActive = true
+        successImage.leadingAnchor.constraint(equalTo: successView.leadingAnchor, constant: 10).isActive = true
+        successImage.trailingAnchor.constraint(equalTo: successView.trailingAnchor, constant: -10).isActive = true
         successImage.centerXAnchor.constraint(equalTo: successView.centerXAnchor).isActive = true
+        successImage.bottomAnchor.constraint(equalTo: backToInvestmentsButton.topAnchor, constant: -80).isActive = true
     }
     
     private func setBackToInvestmentsConstraints() {
         backToInvestmentsButton.widthAnchor.constraint(equalToConstant: 260).isActive = true
         backToInvestmentsButton.centerXAnchor.constraint(equalTo: successView.centerXAnchor).isActive = true
-        backToInvestmentsButton.bottomAnchor.constraint(equalTo: successView.bottomAnchor, constant: -30).isActive = true
+        backToInvestmentsButton.bottomAnchor.constraint(equalTo: successView.bottomAnchor, constant: -20).isActive = true
     }
     
     private func setupStackView() {
