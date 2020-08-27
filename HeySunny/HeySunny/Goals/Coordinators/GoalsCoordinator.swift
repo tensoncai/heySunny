@@ -25,7 +25,7 @@ class GoalsCoordinator: NavigationCoordinator<GoalsRoute> {
     override func prepareTransition(for route: GoalsRoute) -> NavigationTransition {
         switch route {
         case .news:
-            let viewController = DailyLearningViewController()
+            let viewController = LessonViewController()
             return .push(viewController)
         }
     }

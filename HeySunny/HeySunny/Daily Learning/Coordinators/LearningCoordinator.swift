@@ -9,7 +9,8 @@
 import XCoordinator
 
 enum LearningRoute: Route {
-    case news
+    case dailyLearning
+    case lesson
 }
 
 class LearningCoordinator: NavigationCoordinator<LearningRoute> {
@@ -17,15 +18,18 @@ class LearningCoordinator: NavigationCoordinator<LearningRoute> {
     // MARK: Initialization
 
     init() {
-        super.init(initialRoute: .news)
+        super.init(initialRoute: .dailyLearning)
     }
 
     // MARK: Overrides
 
     override func prepareTransition(for route: LearningRoute) -> NavigationTransition {
         switch route {
-        case .news:
-            let viewController = DailyLearningViewController()
+        case .dailyLearning:
+            let viewController = DailyLearningViewController(router: unownedRouter)
+            return .push(viewController)
+        case .lesson:
+            let viewController = LessonViewController()
             return .push(viewController)
         }
     }

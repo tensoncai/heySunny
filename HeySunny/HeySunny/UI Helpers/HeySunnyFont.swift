@@ -20,7 +20,7 @@ enum HeySunnyFont {
         
         switch self {
         case .headline:
-            config = (weight: .heavy, size: 28.0)
+            config = (weight: .heavy, size: 24.0)
         case .subHeadline:
             config = (weight: .medium, size: 21.0)
         case .section:

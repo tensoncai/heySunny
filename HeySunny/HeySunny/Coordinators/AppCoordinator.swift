@@ -70,7 +70,7 @@ class AppCoordinator: TabBarCoordinator<AppRoute> {
         self.goalsRouter = goalsRouter
         self.investRouter = investRouter
         
-        super.init(tabs: [learnRouter, transactionsRouter, homeRouter, goalsRouter, investRouter], select: learnRouter)
+        super.init(tabs: [learnRouter, transactionsRouter, homeRouter, goalsRouter, investRouter], select: homeRouter)
     }
     
     override func prepareTransition(for route: AppRoute) -> TabBarTransition {

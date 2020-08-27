@@ -7,9 +7,21 @@
 //
 
 import UIKit
+import XCoordinator
 
 class DailyLearningViewController: UIViewController {
+    let router: UnownedRouter<LearningRoute>
     private var tableViewHandler: TableViewHandler!
+    
+    init(router: UnownedRouter<LearningRoute>) {
+        self.router = router
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         tableViewHandler = TableViewHandler(tableViewData: LessonCardViewModel.mockData, delegate: self)
@@ -20,6 +32,6 @@ class DailyLearningViewController: UIViewController {
 
 extension DailyLearningViewController: TableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("oof")
+        router.trigger(.lesson)
     }
 }

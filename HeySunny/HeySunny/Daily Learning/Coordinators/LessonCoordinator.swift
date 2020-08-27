@@ -1,5 +1,5 @@
 //
-//  HomeCoordinator.swift
+//  LessonCoordinator.swift
 //  HeySunny
 //
 //  Created by Darius Ngo on 8/26/20.
@@ -8,11 +8,11 @@
 
 import XCoordinator
 
-enum HomeRoute: Route {
+enum LessonRoute: Route {
     case news
 }
 
-class HomeCoordinator: NavigationCoordinator<HomeRoute> {
+class LessonCoordinator: NavigationCoordinator<LessonRoute> {
 
     // MARK: Initialization
 
@@ -22,7 +22,7 @@ class HomeCoordinator: NavigationCoordinator<HomeRoute> {
 
     // MARK: Overrides
 
-    override func prepareTransition(for route: HomeRoute) -> NavigationTransition {
+    override func prepareTransition(for route: LessonRoute) -> NavigationTransition {
         switch route {
         case .news:
             let viewController = LessonViewController()
