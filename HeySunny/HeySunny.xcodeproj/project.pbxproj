@@ -15,6 +15,10 @@
 		478A69CF24F7624B0037AC70 /* StorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69CE24F7624B0037AC70 /* StorageFactory.swift */; };
 		478A69D124F762C50037AC70 /* BalanceItemStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69D024F762C50037AC70 /* BalanceItemStorage.swift */; };
 		478A69D524F776580037AC70 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69D424F776580037AC70 /* AlertHelper.swift */; };
+		478D3BD824F89B69000A27C0 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478D3BD724F89B69000A27C0 /* Tutorial.storyboard */; };
+		478D3BDA24F89E87000A27C0 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D3BD924F89E87000A27C0 /* TutorialPageViewController.swift */; };
+		478D3BDC24F8A33C000A27C0 /* TutorialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D3BDB24F8A33C000A27C0 /* TutorialCoordinator.swift */; };
+		478D3BDE24F8B8B6000A27C0 /* TutorialContinaerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D3BDD24F8B8B5000A27C0 /* TutorialContinaerViewController.swift */; };
 		47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */; };
 		47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */; };
 		47DAED1124F6013D00E538DC /* TransactionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */; };
@@ -69,6 +73,10 @@
 		478A69CE24F7624B0037AC70 /* StorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageFactory.swift; sourceTree = "<group>"; };
 		478A69D024F762C50037AC70 /* BalanceItemStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceItemStorage.swift; sourceTree = "<group>"; };
 		478A69D424F776580037AC70 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		478D3BD724F89B69000A27C0 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		478D3BD924F89E87000A27C0 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		478D3BDB24F8A33C000A27C0 /* TutorialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCoordinator.swift; sourceTree = "<group>"; };
+		478D3BDD24F8B8B5000A27C0 /* TutorialContinaerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialContinaerViewController.swift; sourceTree = "<group>"; };
 		47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
 		47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -171,6 +179,10 @@
 		478D3BD424F8992C000A27C0 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				478D3BD724F89B69000A27C0 /* Tutorial.storyboard */,
+				478D3BD924F89E87000A27C0 /* TutorialPageViewController.swift */,
+				478D3BDB24F8A33C000A27C0 /* TutorialCoordinator.swift */,
+				478D3BDD24F8B8B5000A27C0 /* TutorialContinaerViewController.swift */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -490,6 +502,7 @@
 			files = (
 				5B75C70524F047C600C58D1A /* LaunchScreen.storyboard in Resources */,
 				5B75C70224F047C600C58D1A /* Assets.xcassets in Resources */,
+				478D3BD824F89B69000A27C0 /* Tutorial.storyboard in Resources */,
 				47DAED1124F6013D00E538DC /* TransactionsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,8 +614,10 @@
 				5BF2936C24F62F9A00D13ACE /* HomeCoordinator.swift in Sources */,
 				5BF2935B24F5F23200D13ACE /* AppCoordinator.swift in Sources */,
 				47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */,
+				478D3BDC24F8A33C000A27C0 /* TutorialCoordinator.swift in Sources */,
 				47DAED1624F6348E00E538DC /* BankCard.swift in Sources */,
 				5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */,
+				478D3BDA24F89E87000A27C0 /* TutorialPageViewController.swift in Sources */,
 				5B653E3424F355FD00E6AA21 /* CreditCardIconView.swift in Sources */,
 				478A69CA24F758890037AC70 /* ExpenseConfirmationViewController.swift in Sources */,
 				478A69C724F6F6E70037AC70 /* BalanceItemCell.swift in Sources */,
@@ -617,6 +632,7 @@
 				47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */,
 				5BF2936E24F62FED00D13ACE /* HeySunnyIcon.swift in Sources */,
 				5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */,
+				478D3BDE24F8B8B6000A27C0 /* TutorialContinaerViewController.swift in Sources */,
 				47DAED1824F6353900E538DC /* TransactionUsecase.swift in Sources */,
 				5B653E2C24F348FB00E6AA21 /* RegularPlayButtonView.swift in Sources */,
 				478A69CD24F75FCE0037AC70 /* BankCardStorage.swift in Sources */,

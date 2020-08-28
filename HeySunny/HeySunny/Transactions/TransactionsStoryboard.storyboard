@@ -494,7 +494,7 @@
     </scenes>
     <resources>
         <image name="CreditCardDots" width="110" height="13"/>
-        <image name="Logo" width="128" height="128"/>
+        <image name="Logo" width="103" height="108"/>
         <image name="SettingsIcon" width="31" height="31"/>
         <image name="camera" width="28" height="21"/>
     </resources>
