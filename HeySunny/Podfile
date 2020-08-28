@@ -9,12 +9,18 @@ target 'HeySunny' do
   pod 'Charts'
   pod 'XCoordinator'
   pod "UPCarouselFlowLayout"
+  pod 'WeScan', '>= 0.9'
+  pod 'Permission', '~> 3.1'
+  pod 'Permission/Camera'
 
   target 'HeySunnyTests' do
     inherit! :search_paths
     pod 'Charts'
     pod 'XCoordinator'
     pod "UPCarouselFlowLayout"
+    pod 'WeScan', '>= 0.9'
+    pod 'Permission', '~> 3.1'
+    pod 'Permission/Camera'
     # Pods for testing
   end
 
