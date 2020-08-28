@@ -2,6 +2,7 @@ PODS:
   - Charts (3.5.0):
     - Charts/Core (= 3.5.0)
   - Charts/Core (3.5.0)
+  - M13Checkbox (3.4.0)
   - Permission (3.1.2):
     - Permission/Core (= 3.1.2)
   - Permission/Camera (3.1.2):
@@ -15,6 +16,7 @@ PODS:
 
 DEPENDENCIES:
   - Charts
+  - M13Checkbox
   - Permission (~> 3.1)
   - Permission/Camera
   - UPCarouselFlowLayout
@@ -24,6 +26,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Charts
+    - M13Checkbox
     - Permission
     - UPCarouselFlowLayout
     - WeScan
@@ -31,11 +34,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
   Permission: 4821359fb4d4367fb59aa16df38fbba5722ac842
   UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
   WeScan: fed582f6c38014d529afb5aa9ffd1bad38fc72b7
   XCoordinator: 9ee654fedef1ffede33d5c11677708a555c00542
 
-PODFILE CHECKSUM: e9d901c8e0e4066e1df5dbcc17280333d8b76d67
+PODFILE CHECKSUM: d8bbdcc3f8c5eeabf3141a3ad107b66d29872b74
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.8.4

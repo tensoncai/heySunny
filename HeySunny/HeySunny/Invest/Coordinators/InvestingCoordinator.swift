@@ -25,7 +25,7 @@ class InvestingCoordinator: NavigationCoordinator<InvestingRoute> {
     override func prepareTransition(for route: InvestingRoute) -> NavigationTransition {
         switch route {
         case .news:
-            let viewController = DailyLearningViewController()
+            let viewController = LessonViewController()
             return .push(viewController)
         }
     }

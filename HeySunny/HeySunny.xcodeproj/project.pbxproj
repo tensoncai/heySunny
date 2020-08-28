@@ -26,6 +26,12 @@
 		47DAED1624F6348E00E538DC /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED1524F6348E00E538DC /* BankCard.swift */; };
 		47DAED1824F6353900E538DC /* TransactionUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED1724F6353900E538DC /* TransactionUsecase.swift */; };
 		4951B7E416B7A2D13D48A638 /* Pods_HeySunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */; };
+		5B4AF0B024F7711A00BDEF91 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0AF24F7711A00BDEF91 /* LessonView.swift */; };
+		5B4AF0B224F7713800BDEF91 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0B124F7713800BDEF91 /* LessonViewController.swift */; };
+		5B4AF0B424F7714E00BDEF91 /* LessonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0B324F7714E00BDEF91 /* LessonCoordinator.swift */; };
+		5B4AF0B824F785E300BDEF91 /* LessonLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0B724F785E300BDEF91 /* LessonLevelViewController.swift */; };
+		5B4AF0BA24F7868200BDEF91 /* LessonLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0B924F7868200BDEF91 /* LessonLevelView.swift */; };
+		5B4AF0BC24F7894900BDEF91 /* LessonLevelCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0BB24F7894900BDEF91 /* LessonLevelCardCell.swift */; };
 		5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7524F23A91003DC74D /* LessonCardView.swift */; };
 		5B5F8D7924F23AB6003DC74D /* LessonCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */; };
 		5B5F8D7B24F23ECD003DC74D /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7A24F23ECD003DC74D /* PlayButtonView.swift */; };
@@ -39,6 +45,8 @@
 		5B653E3424F355FD00E6AA21 /* CreditCardIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E3324F355FD00E6AA21 /* CreditCardIconView.swift */; };
 		5B653E3624F3560900E6AA21 /* BudgetIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E3524F3560900E6AA21 /* BudgetIconView.swift */; };
 		5B653E3824F3561400E6AA21 /* InvestingIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E3724F3561400E6AA21 /* InvestingIconView.swift */; };
+		5B726CB824F88CCA001F514C /* CheckboxQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B726CB724F88CCA001F514C /* CheckboxQuestionView.swift */; };
+		5B726CBA24F8ABF8001F514C /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B726CB924F8ABF8001F514C /* InfoCardView.swift */; };
 		5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6F824F047C500C58D1A /* AppDelegate.swift */; };
 		5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */; };
 		5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FC24F047C500C58D1A /* ViewController.swift */; };
@@ -80,6 +88,12 @@
 		47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
 		47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionsStoryboard.storyboard; sourceTree = "<group>"; };
+		5B4AF0AF24F7711A00BDEF91 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		5B4AF0B124F7713800BDEF91 /* LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
+		5B4AF0B324F7714E00BDEF91 /* LessonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCoordinator.swift; sourceTree = "<group>"; };
+		5B4AF0B724F785E300BDEF91 /* LessonLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLevelViewController.swift; sourceTree = "<group>"; };
+		5B4AF0B924F7868200BDEF91 /* LessonLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLevelView.swift; sourceTree = "<group>"; };
+		5B4AF0BB24F7894900BDEF91 /* LessonLevelCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLevelCardCell.swift; sourceTree = "<group>"; };
 		47DAED1224F628D400E538DC /* BankCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardCell.swift; sourceTree = "<group>"; };
 		47DAED1524F6348E00E538DC /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
 		47DAED1724F6353900E538DC /* TransactionUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUsecase.swift; sourceTree = "<group>"; };
@@ -96,6 +110,8 @@
 		5B653E3324F355FD00E6AA21 /* CreditCardIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardIconView.swift; sourceTree = "<group>"; };
 		5B653E3524F3560900E6AA21 /* BudgetIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetIconView.swift; sourceTree = "<group>"; };
 		5B653E3724F3561400E6AA21 /* InvestingIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingIconView.swift; sourceTree = "<group>"; };
+		5B726CB724F88CCA001F514C /* CheckboxQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxQuestionView.swift; sourceTree = "<group>"; };
+		5B726CB924F8ABF8001F514C /* InfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardView.swift; sourceTree = "<group>"; };
 		5B75C6F524F047C500C58D1A /* HeySunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeySunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B75C6F824F047C500C58D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -231,6 +247,11 @@
 				5B5F8D7524F23A91003DC74D /* LessonCardView.swift */,
 				5B653E2724F2C26B00E6AA21 /* LessonCardCell.swift */,
 				5B653E2924F3438F00E6AA21 /* DailyLearningView.swift */,
+				5B4AF0AF24F7711A00BDEF91 /* LessonView.swift */,
+				5B4AF0B924F7868200BDEF91 /* LessonLevelView.swift */,
+				5B4AF0BB24F7894900BDEF91 /* LessonLevelCardCell.swift */,
+				5B726CB724F88CCA001F514C /* CheckboxQuestionView.swift */,
+				5B726CB924F8ABF8001F514C /* InfoCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +307,8 @@
 			isa = PBXGroup;
 			children = (
 				5BF2935E24F6256400D13ACE /* DailyLearningViewController.swift */,
+				5B4AF0B124F7713800BDEF91 /* LessonViewController.swift */,
+				5B4AF0B724F785E300BDEF91 /* LessonLevelViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -352,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */,
+				5B4AF0B324F7714E00BDEF91 /* LessonCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -602,18 +626,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B4AF0B824F785E300BDEF91 /* LessonLevelViewController.swift in Sources */,
 				47DAED1324F628D400E538DC /* BankCardCell.swift in Sources */,
 				5BF2936824F62F8100D13ACE /* InvestingCoordinator.swift in Sources */,
 				5B653E2A24F3438F00E6AA21 /* DailyLearningView.swift in Sources */,
 				478A69D124F762C50037AC70 /* BalanceItemStorage.swift in Sources */,
 				5B653E2824F2C26B00E6AA21 /* LessonCardCell.swift in Sources */,
 				5B5F8D7B24F23ECD003DC74D /* PlayButtonView.swift in Sources */,
+				5B4AF0B024F7711A00BDEF91 /* LessonView.swift in Sources */,
 				5B653E3224F3552E00E6AA21 /* FamilyPlanningIconView.swift in Sources */,
 				478A69CF24F7624B0037AC70 /* StorageFactory.swift in Sources */,
 				5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */,
 				5BF2936C24F62F9A00D13ACE /* HomeCoordinator.swift in Sources */,
 				5BF2935B24F5F23200D13ACE /* AppCoordinator.swift in Sources */,
 				47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */,
+				5B4AF0B424F7714E00BDEF91 /* LessonCoordinator.swift in Sources */,
+				5B4AF0BA24F7868200BDEF91 /* LessonLevelView.swift in Sources */,
+				5B726CB824F88CCA001F514C /* CheckboxQuestionView.swift in Sources */,
 				478D3BDC24F8A33C000A27C0 /* TutorialCoordinator.swift in Sources */,
 				47DAED1624F6348E00E538DC /* BankCard.swift in Sources */,
 				5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */,
@@ -625,6 +654,7 @@
 				478A69D524F776580037AC70 /* AlertHelper.swift in Sources */,
 				5BF2935F24F6256400D13ACE /* DailyLearningViewController.swift in Sources */,
 				5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */,
+				5B4AF0BC24F7894900BDEF91 /* LessonLevelCardCell.swift in Sources */,
 				5B653E2E24F3533400E6AA21 /* RetirementIconView.swift in Sources */,
 				5B653E2324F2BDBD00E6AA21 /* HeySunnyFont.swift in Sources */,
 				478A69C524F6EFC50037AC70 /* BalanceItem.swift in Sources */,
@@ -639,6 +669,8 @@
 				5B653E3824F3561400E6AA21 /* InvestingIconView.swift in Sources */,
 				5BF2935D24F5F6F600D13ACE /* LearningCoordinator.swift in Sources */,
 				5B653E3624F3560900E6AA21 /* BudgetIconView.swift in Sources */,
+				5B4AF0B224F7713800BDEF91 /* LessonViewController.swift in Sources */,
+				5B726CBA24F8ABF8001F514C /* InfoCardView.swift in Sources */,
 				5B5F8D7924F23AB6003DC74D /* LessonCardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
