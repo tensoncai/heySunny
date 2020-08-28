@@ -10,9 +10,12 @@ import UIKit
 import Permission
 import WeScan
 import TapCardScanner_iOS
+import XCoordinator
 
 class LinkCreditCardViewController: UIViewController {
 
+    var router: UnownedRouter<AppRoute>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,11 +35,14 @@ class LinkCreditCardViewController: UIViewController {
                 tapFullScreenCustomiser.tapFullScreenScanBorderColor = .white
                 let fullScanner:TapFullScreenCardScanner = TapFullScreenCardScanner()
                 
-                try? fullScanner.showModalScreen(presenter: self, tapFullCardScannerDimissed: nil, tapCardScannerDidFinish: { (scannedCard) in
+                try? fullScanner.showModalScreen(presenter: self, tapFullCardScannerDimissed: nil, tapCardScannerDidFinish: { [weak self] (scannedCard) in
                     let bankCard = BankCard(amount: 1200, logo: nil, autoPayEnrolled: false, date: (scannedCard.tapCardExpiryMonth ?? "??") + "/" + (scannedCard.tapCardExpiryYear ?? "??"), creditCardLastFour: String(scannedCard.tapCardNumber?.suffix(4) ?? "????"), background: "Credit")
                     
                     let bankCardStorage = StorageFactory.getBankCardStorage()
+                    
                     bankCardStorage.add(bankCard)
+                    self?.router.trigger(.main)
+                    
                     }, scannerUICustomization: tapFullScreenCustomiser)
                 
             default:

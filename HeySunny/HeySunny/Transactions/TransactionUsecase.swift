@@ -9,25 +9,21 @@
 import Foundation
 
 class TransactionUsecase {
-    
-    private(set) var bankCardsDataSource = [BankCard]()
-    
-    private(set) var balanceItemSource = [BalanceItem]()
-    
+            
     private let balanceItemStorage = StorageFactory.getBalanceItemStorage()
     
-    init() {
-        bankCardsDataSource = StorageFactory.getBankCardStorage().get()
-        balanceItemSource = balanceItemStorage.get()
-    }
+    private let balanceCardStorage = StorageFactory.getBankCardStorage()
     
     func getBalanceItemSource(filterBy: BalanceType?) -> [BalanceItem] {
-        guard let filter = filterBy else { return balanceItemSource }
-        return balanceItemSource.filter { $0.type == filter }
+        guard let filter = filterBy else { return balanceItemStorage.get() }
+        return balanceItemStorage.get().filter { $0.type == filter }
     }
     
     func addExpense(_ expense: BalanceItem) {
         balanceItemStorage.add(expense)
-        balanceItemSource = balanceItemStorage.get()
+    }
+    
+    func getBankCardsSource() -> [BankCard] {
+        return StorageFactory.getBankCardStorage().get()
     }
 }

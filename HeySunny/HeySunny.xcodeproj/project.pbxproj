@@ -21,6 +21,7 @@
 		478D3BDE24F8B8B6000A27C0 /* TutorialContinaerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D3BDD24F8B8B5000A27C0 /* TutorialContinaerViewController.swift */; };
 		478D3BE124F8CCF2000A27C0 /* Security.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478D3BE024F8CCF2000A27C0 /* Security.storyboard */; };
 		478D3BE324F8D174000A27C0 /* LinkCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D3BE224F8D174000A27C0 /* LinkCreditCardViewController.swift */; };
+		478D3BE524F8E0A2000A27C0 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D3BE424F8E0A2000A27C0 /* SecurityViewController.swift */; };
 		47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */; };
 		47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */; };
 		47DAED1124F6013D00E538DC /* TransactionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */; };
@@ -94,6 +95,7 @@
 		478D3BDD24F8B8B5000A27C0 /* TutorialContinaerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialContinaerViewController.swift; sourceTree = "<group>"; };
 		478D3BE024F8CCF2000A27C0 /* Security.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Security.storyboard; sourceTree = "<group>"; };
 		478D3BE224F8D174000A27C0 /* LinkCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCreditCardViewController.swift; sourceTree = "<group>"; };
+		478D3BE424F8E0A2000A27C0 /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
 		47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
 		47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			children = (
 				478D3BE024F8CCF2000A27C0 /* Security.storyboard */,
 				478D3BE224F8D174000A27C0 /* LinkCreditCardViewController.swift */,
+				478D3BE424F8E0A2000A27C0 /* SecurityViewController.swift */,
 			);
 			path = Security;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				5B653E3224F3552E00E6AA21 /* FamilyPlanningIconView.swift in Sources */,
 				478A69CF24F7624B0037AC70 /* StorageFactory.swift in Sources */,
 				DCA1EAAB24F84CBE00266A83 /* PelotonVC.swift in Sources */,
+				478D3BE524F8E0A2000A27C0 /* SecurityViewController.swift in Sources */,
 				DC51F6B924F386FB000B0322 /* SummaryVC.swift in Sources */,
 				5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */,
 				5BF2936C24F62F9A00D13ACE /* HomeCoordinator.swift in Sources */,
