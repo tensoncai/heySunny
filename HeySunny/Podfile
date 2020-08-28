@@ -9,6 +9,9 @@ target 'HeySunny' do
   pod 'Charts'
   pod 'XCoordinator'
   pod "UPCarouselFlowLayout"
+  pod 'WeScan', '>= 0.9'
+  pod 'Permission', '~> 3.1'
+  pod 'Permission/Camera'
   pod 'M13Checkbox'
 
   target 'HeySunnyTests' do
@@ -16,6 +19,9 @@ target 'HeySunny' do
     pod 'Charts'
     pod 'XCoordinator'
     pod "UPCarouselFlowLayout"
+    pod 'WeScan', '>= 0.9'
+    pod 'Permission', '~> 3.1'
+    pod 'Permission/Camera'
     # Pods for testing
   end
 

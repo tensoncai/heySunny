@@ -21,7 +21,6 @@ enum AppRoute: Route {
 class AppCoordinator: TabBarCoordinator<AppRoute> {
     
     // MARK: Stored properties
-    
     private let learnRouter: StrongRouter<LearningRoute>
     private let transactionsRouter: StrongRouter<TransactionsRoute>
     private let homeRouter: StrongRouter<HomeRoute>
