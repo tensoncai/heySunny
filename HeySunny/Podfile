@@ -16,7 +16,7 @@ target 'HeySunny' do
 
   target 'HeySunnyTests' do
     inherit! :search_paths
-    pod 'Charts'
+
     pod 'XCoordinator'
     pod "UPCarouselFlowLayout"
     pod 'WeScan', '>= 0.9'
