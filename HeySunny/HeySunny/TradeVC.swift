@@ -9,8 +9,11 @@
 import UIKit
 
 class TradeVC: UIViewController, UITextFieldDelegate {
-    var stackView = UIStackView()
     
+    let pelotonVC = PelotonVC()
+    
+    var stackView = UIStackView()
+
     let searchBar: UITextField = {
         let textField = UITextField()
         textField.text = " Search"
@@ -74,8 +77,6 @@ class TradeVC: UIViewController, UITextFieldDelegate {
         setConstraints()
     }
     
-    
-    
     private func setConstraints() {
         searchBar.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 20).isActive = true
         searchBar.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -200).isActive = true
@@ -100,7 +101,7 @@ class TradeVC: UIViewController, UITextFieldDelegate {
     }
     
     @objc func placeATradeAction(sender: UIButton!) {
-        
+        present(pelotonVC, animated: true, completion: nil)
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {

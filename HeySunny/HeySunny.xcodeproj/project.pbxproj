@@ -32,6 +32,7 @@
 		DC066ABE24F38883002F5348 /* TransferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC066ABD24F38883002F5348 /* TransferVC.swift */; };
 		DC066AC024F38892002F5348 /* TradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC066ABF24F38892002F5348 /* TradeVC.swift */; };
 		DC51F6B924F386FB000B0322 /* SummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC51F6B824F386FB000B0322 /* SummaryVC.swift */; };
+		DCA1EAAB24F84CBE00266A83 /* PelotonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1EAAA24F84CBE00266A83 /* PelotonVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		DC51F6B424F385C1000B0322 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC51F6B824F386FB000B0322 /* SummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryVC.swift; sourceTree = "<group>"; };
 		DC51F6BA24F3872A000B0322 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA1EAAA24F84CBE00266A83 /* PelotonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelotonVC.swift; sourceTree = "<group>"; };
 		F68B08F4FCDA857FED3FC6FA /* Pods-HeySunnyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunnyTests.debug.xcconfig"; path = "Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +217,7 @@
 				DC51F6B824F386FB000B0322 /* SummaryVC.swift */,
 				DC066ABD24F38883002F5348 /* TransferVC.swift */,
 				DC066ABF24F38892002F5348 /* TradeVC.swift */,
+				DCA1EAAA24F84CBE00266A83 /* PelotonVC.swift */,
 			);
 			path = HeySunny;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				5B653E2824F2C26B00E6AA21 /* LessonCardCell.swift in Sources */,
 				5B5F8D7B24F23ECD003DC74D /* PlayButtonView.swift in Sources */,
 				5B653E3224F3552E00E6AA21 /* FamilyPlanningIconView.swift in Sources */,
+				DCA1EAAB24F84CBE00266A83 /* PelotonVC.swift in Sources */,
 				DC51F6B924F386FB000B0322 /* SummaryVC.swift in Sources */,
 				5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */,
 				5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */,

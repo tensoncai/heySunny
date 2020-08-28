@@ -12,6 +12,7 @@ import Charts
 class SummaryVC: UIViewController, ChartViewDelegate, UITableViewDelegate , UITableViewDataSource {
     
     var lineChart = LineChartView()
+    var x: [Double] = [508.57,504.717,498.79,514.79,477.05,463,463.933,457.41,464.25,459.315,457.72,441.99,447.875,450.4,452.82,441.62,437.51,436.53,432.8,411.535,376.75,375,377.47,374.84,363.95,387.994,386.77,396.69,385.665,387.95,386.25,395.96,379.36,389.06,381.34,385.05,376.72,375.41,370,367.85,365.12,360.08,353.25,364.41,360.7,365,364,351.34,354.635,351.41,355.15,351.46,333.25,344.72,349.31,347.9,332.14,330.25,323.35,324.39,324.66,320.745,317.75,319.25,316.77,316.14,323.5,315.77,318.66,316.68,315.03,313.17,300.35,304.51,312.15,317.83,308.1,305.64,303.22,300.46,295.06,289.17,286.25,289.96,284.73,285.08,281.8,277.2,275.87,273.61,276.28,277.95,284.69,287.38,282.4,280,268.31,268.7,262.74,270.8,250.9,242.8,240.34,246.5,255.6,250.74,252.75,246.52,250.75,236.36,228.08,247.18,247.385,239.77,247.51,241.95,264.89,255.94,277.39,277.14,263.75,282,295.52,296.44,303.67,282.28,257.26,281.1]
     
     let tabs = ["1D", "1W", "1M", "3M", "1Y"]
     var stackView = UIStackView()
@@ -65,16 +66,22 @@ class SummaryVC: UIViewController, ChartViewDelegate, UITableViewDelegate , UITa
         lineChart.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
         
         var entries = [ChartDataEntry]()
-        for x in 0..<100 {
-            let randomDouble = Double.random(in: 1...100)
-            entries.append(ChartDataEntry(x: Double(x), y: randomDouble))
+        
+        x.reverse()
+        for i in 0..<x.count {
+            entries.append(ChartDataEntry(x: Double(i), y: x[i]))
         }
         
         let set = LineChartDataSet(entries: entries)
-        set.colors = [UIColor(red: 0, green: 128/255, blue: 0, alpha: 1)]
+        set.colors = [UIColor(red: 153/255, green: 50/255, blue: 204/255, alpha: 1)]
         set.drawCirclesEnabled = false
         
         let data = LineChartData(dataSet: set)
+        let gradientColors = [CGColor(srgbRed: 153/255, green: 50/255, blue: 204/255, alpha: 1), UIColor.clear.cgColor] as CFArray // Colors of the gradient
+        let colorLocations:[CGFloat] = [1.0, 0.0] // Positioning of the gradient
+        let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) // Gradient Object
+        set.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
+        set.drawFilledEnabled = true
         
         lineChart.data = data
         
