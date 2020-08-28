@@ -110,7 +110,7 @@ class TransferVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     let successImage: UIImageView = {
         let imageView = UIImageView()
         imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-        imageView.image = UIImage(named: "success")
+        imageView.image = UIImage(named: "successful")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = UIColor.clear
         
