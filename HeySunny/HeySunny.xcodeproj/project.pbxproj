@@ -26,6 +26,7 @@
 		47DAED1624F6348E00E538DC /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED1524F6348E00E538DC /* BankCard.swift */; };
 		47DAED1824F6353900E538DC /* TransactionUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED1724F6353900E538DC /* TransactionUsecase.swift */; };
 		4951B7E416B7A2D13D48A638 /* Pods_HeySunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */; };
+		5B26039124F8D8E00091060F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B26039024F8D8E00091060F /* MainCoordinator.swift */; };
 		5B4AF0B024F7711A00BDEF91 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0AF24F7711A00BDEF91 /* LessonView.swift */; };
 		5B4AF0B224F7713800BDEF91 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0B124F7713800BDEF91 /* LessonViewController.swift */; };
 		5B4AF0B424F7714E00BDEF91 /* LessonCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0B324F7714E00BDEF91 /* LessonCoordinator.swift */; };
@@ -95,6 +96,7 @@
 		47DAED1224F628D400E538DC /* BankCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardCell.swift; sourceTree = "<group>"; };
 		47DAED1524F6348E00E538DC /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
 		47DAED1724F6353900E538DC /* TransactionUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUsecase.swift; sourceTree = "<group>"; };
+		5B26039024F8D8E00091060F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		5B4AF0AF24F7711A00BDEF91 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		5B4AF0B124F7713800BDEF91 /* LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
 		5B4AF0B324F7714E00BDEF91 /* LessonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCoordinator.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */,
+				5B26039024F8D8E00091060F /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				5B75C6FD24F047C500C58D1A /* InvestmentViewController.swift in Sources */,
 				5B4AF0BC24F7894900BDEF91 /* LessonLevelCardCell.swift in Sources */,
 				5B653E2E24F3533400E6AA21 /* RetirementIconView.swift in Sources */,
+				5B26039124F8D8E00091060F /* MainCoordinator.swift in Sources */,
 				5B653E2324F2BDBD00E6AA21 /* HeySunnyFont.swift in Sources */,
 				478A69C524F6EFC50037AC70 /* BalanceItem.swift in Sources */,
 				5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */,
