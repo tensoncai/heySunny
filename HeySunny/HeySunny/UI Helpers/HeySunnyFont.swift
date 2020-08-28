@@ -11,6 +11,7 @@ import UIKit
 enum HeySunnyFont {
     case headline
     case subHeadline
+    case lesson
     case section
     case content
     case navigation
@@ -20,13 +21,15 @@ enum HeySunnyFont {
         
         switch self {
         case .headline:
-            config = (weight: .heavy, size: 28.0)
+            config = (weight: .heavy, size: 24.0)
         case .subHeadline:
             config = (weight: .medium, size: 21.0)
+        case .lesson:
+            config = (weight: .heavy, size: 21.0)
         case .section:
             config = (weight: .heavy, size: 18.0)
         case .content:
-            config = (weight: .medium, size: 18.0)
+            config = (weight: .book, size: 18.0)
         case .navigation:
             config = (weight: .medium, size: 14.0)
         }
@@ -39,5 +42,6 @@ extension HeySunnyFont {
     private enum Weight: String {
         case heavy = "Heavy"
         case medium = "Medium"
+        case book = "Book"
     }
 }

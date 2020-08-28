@@ -12,12 +12,13 @@ target 'HeySunny' do
   pod 'WeScan', '>= 0.9'
   pod 'Permission', '~> 3.1'
   pod 'Permission/Camera'
+  pod 'M13Checkbox'
   pod 'TapCardScanner-iOS', '~> 1.0'
 
 
   target 'HeySunnyTests' do
     inherit! :search_paths
-    pod 'Charts'
+
     pod 'XCoordinator'
     pod "UPCarouselFlowLayout"
     pod 'WeScan', '>= 0.9'

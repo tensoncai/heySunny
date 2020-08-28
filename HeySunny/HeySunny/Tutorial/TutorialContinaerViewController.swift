@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import XCoordinator
 
 protocol TutorialPageFlipper: class {
     func goToNext()
 }
 
 class TutorialContinaerViewController: UIViewController {
-
+    var router: UnownedRouter<AppRoute>!
+    
     @IBOutlet weak var pageControl: UIPageControl!
     private let color = UIColor(red: 0.761, green: 0.82, blue: 0.851, alpha: 1)
     private let fillColor = UIColor(red: 0.354, green: 0.354, blue: 0.354, alpha: 1)
@@ -57,12 +59,12 @@ class TutorialContinaerViewController: UIViewController {
         pageControl.currentPage += 1
         currentPage += 1
         if currentPage == 5 {
-            skipTutorialCompletion?()
+            router.trigger(.main)
         }
     }
     
     @objc func actionSkip() {
-        skipTutorialCompletion?()
+        router.trigger(.main)
     }
 }
 
@@ -84,22 +86,4 @@ extension TutorialContinaerViewController: TutorialPagerDelegate {
         pageControl.currentPage = index
         pageControl.customPageControl(dotFillColor: fillColor, dotBorderColor: color, dotBorderWidth: 1)
     }
-}
-
-fileprivate extension UIPageControl {
-
-    func customPageControl(dotFillColor:UIColor, dotBorderColor:UIColor, dotBorderWidth:CGFloat) {
-        for (pageIndex, dotView) in self.subviews.enumerated() {
-            if self.currentPage == pageIndex {
-                dotView.backgroundColor = dotFillColor
-                dotView.layer.cornerRadius = dotView.frame.size.height / 2
-            }else{
-                dotView.backgroundColor = .clear
-                dotView.layer.cornerRadius = dotView.frame.size.height / 2
-                dotView.layer.borderColor = dotBorderColor.cgColor
-                dotView.layer.borderWidth = dotBorderWidth
-            }
-        }
-    }
-
 }

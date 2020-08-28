@@ -22,14 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         
-        let viewController = UIStoryboard(name: "Tutorial", bundle:nil).instantiateViewController(withIdentifier: "TutorialViewControllerId") as! TutorialContinaerViewController
-        
-        viewController.skipTutorialCompletion = { [weak router] in
-            router?.setRoot(for: window)
-        }
-        
-        window.rootViewController = viewController
-        window.makeKeyAndVisible()
+        router.setRoot(for: window)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
