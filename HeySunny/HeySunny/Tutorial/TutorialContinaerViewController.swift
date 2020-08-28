@@ -53,7 +53,12 @@ class TutorialContinaerViewController: UIViewController {
     
     @objc func actionGoToNext() {
         pageFlipperDelegate?.goToNext()
+        var currentPage = pageControl.currentPage
         pageControl.currentPage += 1
+        currentPage += 1
+        if currentPage == 5 {
+            skipTutorialCompletion?()
+        }
     }
     
     @objc func actionSkip() {
