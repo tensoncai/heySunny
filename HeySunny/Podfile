@@ -9,6 +9,7 @@ target 'HeySunny' do
   pod 'Charts'
   pod 'XCoordinator'
   pod "UPCarouselFlowLayout"
+  pod 'M13Checkbox'
 
   target 'HeySunnyTests' do
     inherit! :search_paths

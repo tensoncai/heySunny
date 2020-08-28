@@ -2,6 +2,7 @@ PODS:
   - Charts (3.5.0):
     - Charts/Core (= 3.5.0)
   - Charts/Core (3.5.0)
+  - M13Checkbox (3.4.0)
   - UPCarouselFlowLayout (1.1.2)
   - XCoordinator (2.0.7):
     - XCoordinator/Core (= 2.0.7)
@@ -9,20 +10,23 @@ PODS:
 
 DEPENDENCIES:
   - Charts
+  - M13Checkbox
   - UPCarouselFlowLayout
   - XCoordinator
 
 SPEC REPOS:
   trunk:
     - Charts
+    - M13Checkbox
     - UPCarouselFlowLayout
     - XCoordinator
 
 SPEC CHECKSUMS:
   Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
   UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
   XCoordinator: 9ee654fedef1ffede33d5c11677708a555c00542
 
-PODFILE CHECKSUM: fc2ac66aae07319e2d9ade43427d0bee369dce7e
+PODFILE CHECKSUM: e72a4caa33188dffb198c07f2150556f15034970
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.8.4

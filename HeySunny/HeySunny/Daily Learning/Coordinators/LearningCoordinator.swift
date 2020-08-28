@@ -29,8 +29,8 @@ class LearningCoordinator: NavigationCoordinator<LearningRoute> {
             let viewController = DailyLearningViewController(router: unownedRouter)
             return .push(viewController)
         case .lesson:
-            let viewController = LessonViewController()
-            return .push(viewController)
+            let navController = UINavigationController(rootViewController: LessonViewController())
+            return .present(navController)
         }
     }
 

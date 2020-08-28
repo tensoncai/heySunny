@@ -25,13 +25,19 @@ class DailyLearningViewController: UIViewController {
     
     override func loadView() {
         tableViewHandler = TableViewHandler(tableViewData: LessonCardViewModel.mockData, delegate: self)
-        let dailyLearningView = DailyLearningView(handler: tableViewHandler)
+        let dailyLearningView = DailyLearningView(handler: tableViewHandler, delegate: self)
         view = dailyLearningView
     }
 }
 
 extension DailyLearningViewController: TableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //router.trigger(.lesson)
+    }
+}
+
+extension DailyLearningViewController: DailyLearningViewDelegate {
+    func showLesson() {
         router.trigger(.lesson)
     }
 }

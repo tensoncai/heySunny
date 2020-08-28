@@ -11,7 +11,13 @@ import UIKit
 class LessonViewController: UIViewController {
     
     override func loadView() {
-        let lessonView = LessonView()
+        let lessonView = LessonView(delegate: self)
         view = lessonView
+    }
+}
+
+extension LessonViewController: LessonOverViewDelegate {
+    func showLevels() {
+        self.navigationController?.pushViewController(LessonLevelViewController(), animated: true)
     }
 }

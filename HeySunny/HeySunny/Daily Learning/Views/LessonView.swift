@@ -8,18 +8,26 @@
 
 import UIKit
 
+protocol LessonOverViewDelegate: NSObject {
+    func showLevels()
+}
+
 class LessonView: UIView {
     let titleLabel: UILabel
     let levelLabel: UILabel
     let lessonImageView: UIImageView
     let questionCardView: UIView
     let startButton: UIButton
+    let questionStackView: UIStackView
+    weak var delegate: LessonOverViewDelegate?
     
-    init() {
+    init(delegate: LessonOverViewDelegate) {
+        self.delegate = delegate
         titleLabel = Self.makeLabel(withText: "Retirement Planning", font: .headline)
         levelLabel = Self.makeLabel(withText: "0/10 Levels Done", font: .section)
         lessonImageView = UIImageView(image: UIImage(named: "retirement"))
         questionCardView = UIView(frame: .zero)
+        questionStackView = UIStackView()
         startButton = UIButton(frame: .zero)
         
         super.init(frame: .zero)
@@ -41,6 +49,7 @@ class LessonView: UIView {
         setupLabels()
         setupImage()
         setupCardView()
+        setupQuestionStackView()
         setupStartButton()
     }
     
@@ -56,6 +65,26 @@ class LessonView: UIView {
         lessonImageView.translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(lessonImageView)
+    }
+    
+    private func setupQuestionStackView() {
+        questionStackView.translatesAutoresizingMaskIntoConstraints = false
+        questionStackView.axis = .vertical
+        questionStackView.distribution = .fillProportionally
+        questionStackView.spacing = 20
+        
+        let gray = UIColor(red: 0.48, green: 0.48, blue: 0.48, alpha: 1.00)
+        let gray2 = UIColor(red: 0.48, green: 0.48, blue: 0.48, alpha: 0.85)
+        let gray3 = UIColor(red: 0.48, green: 0.48, blue: 0.48, alpha: 0.68)
+        let gray4 = UIColor(red: 0.48, green: 0.48, blue: 0.48, alpha: 0.41)
+        
+        questionStackView.addArrangedSubview(CompletionQuestionView(question: "Level 1: Retirement Accounts", image: UIImage(named: "oval"), color: nil))
+        questionStackView.addArrangedSubview(CompletionQuestionView(question: "Level 2: Your Financial Timeline", image: UIImage(named: "security"), color: gray))
+        questionStackView.addArrangedSubview(CompletionQuestionView(question: "Level 3: Estate Planning", image: UIImage(named: "security"), color: gray2))
+        questionStackView.addArrangedSubview(CompletionQuestionView(question: "Level 4: Assessing Your Risk", image: UIImage(named: "security"), color: gray3))
+        questionStackView.addArrangedSubview(CompletionQuestionView(question: "Level 5: Which Retirement ...", image: UIImage(named: "security"), color: gray4))
+        
+        addSubview(questionStackView)
     }
     
     private func setupCardView() {
@@ -77,8 +106,12 @@ class LessonView: UIView {
         startButton.backgroundColor = UIColor(red: 0.918, green: 0.38, blue: 0.306, alpha: 1)
         startButton.layer.cornerRadius = 25
         startButton.titleLabel?.font = HeySunnyFont.section.font
-        
+        startButton.addTarget(self, action: #selector(showLevels), for: .touchUpInside)
         addSubview(startButton)
+    }
+    
+    @objc private func showLevels() {
+        delegate?.showLevels()
     }
     
     private func setupConstraints() {
@@ -87,13 +120,15 @@ class LessonView: UIView {
         let imageConstraints = self.makeImageConstraints()
         let cardViewConstraints = self.makeCardViewConstraints()
         let buttonConstraints = self.makeButtonConstraints()
+        let stackViewConstraints = makeStackViewConstraints()
         
         let allConstraints: [NSLayoutConstraint] =
             levelLabelConstraints +
             titleLabelConstraints +
             imageConstraints +
             cardViewConstraints +
-            buttonConstraints
+            buttonConstraints +
+            stackViewConstraints
         
         NSLayoutConstraint.activate(allConstraints)
     }
@@ -180,6 +215,22 @@ class LessonView: UIView {
             widthAnchorConstraint,
             heightAnchorConstraint,
             centerXAnchorConstraint,
+        ]
+        
+        return constraints
+    }
+    
+    private func makeStackViewConstraints() -> [NSLayoutConstraint] {
+        let topAnchorConstraint = questionStackView.topAnchor.constraint(equalTo: questionCardView.topAnchor, constant: 50)
+        let bottomAnchorConstraint = questionStackView.bottomAnchor.constraint(equalTo: questionCardView.bottomAnchor, constant: -90)
+        let leadingAnchorConstraint = questionStackView.leadingAnchor.constraint(equalTo: questionCardView.leadingAnchor, constant: 20)
+        let trailingAnchorConstraint = questionStackView.trailingAnchor.constraint(equalTo: questionCardView.trailingAnchor, constant: -10)
+        
+        let constraints: [NSLayoutConstraint] = [
+            topAnchorConstraint,
+            bottomAnchorConstraint,
+            leadingAnchorConstraint,
+            trailingAnchorConstraint,
         ]
         
         return constraints
