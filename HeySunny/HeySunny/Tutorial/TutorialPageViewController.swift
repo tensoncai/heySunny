@@ -16,9 +16,6 @@ class TutorialPageViewController: UIPageViewController, TutorialPageFlipper {
         
     weak var indexDelegate: TutorialPagerDelegate?
     
-    let tutorial2 = UIStoryboard(name: "Tutorial", bundle: nil).instantiateViewController(withIdentifier: "Tutorial2") as UIViewController
-    let tutorial3 = UIStoryboard(name: "Tutorial", bundle: nil).instantiateViewController(withIdentifier: "Tutorial3") as UIViewController
-    
     var controllers = [UIViewController]()
     
     override func viewDidLoad() {

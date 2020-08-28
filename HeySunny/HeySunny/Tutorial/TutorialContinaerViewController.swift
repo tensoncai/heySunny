@@ -18,6 +18,8 @@ class TutorialContinaerViewController: UIViewController {
     private let color = UIColor(red: 0.761, green: 0.82, blue: 0.851, alpha: 1)
     private let fillColor = UIColor(red: 0.354, green: 0.354, blue: 0.354, alpha: 1)
     
+    var skipTutorialCompletion: (() -> Void)?
+    
     @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnSkip: UIButton!
@@ -32,6 +34,8 @@ class TutorialContinaerViewController: UIViewController {
         btnNext.isHidden = true
         
         btnNext.addTarget(self, action: #selector(actionGoToNext), for: .touchUpInside)
+        
+        btnSkip.addTarget(self, action: #selector(actionSkip), for: .touchUpInside)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,6 +54,10 @@ class TutorialContinaerViewController: UIViewController {
     @objc func actionGoToNext() {
         pageFlipperDelegate?.goToNext()
         pageControl.currentPage += 1
+    }
+    
+    @objc func actionSkip() {
+        skipTutorialCompletion?()
     }
 }
 
