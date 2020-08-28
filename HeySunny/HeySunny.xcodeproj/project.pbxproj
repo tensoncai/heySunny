@@ -1,0 +1,885 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4520AA1344651B48AE57D36D /* Pods_HeySunnyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0567C6FE472B293A8C5D51 /* Pods_HeySunnyTests.framework */; };
+		478A69C524F6EFC50037AC70 /* BalanceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69C424F6EFC50037AC70 /* BalanceItem.swift */; };
+		478A69C724F6F6E70037AC70 /* BalanceItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69C624F6F6E70037AC70 /* BalanceItemCell.swift */; };
+		478A69CA24F758890037AC70 /* ExpenseConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69C924F758890037AC70 /* ExpenseConfirmationViewController.swift */; };
+		478A69CD24F75FCE0037AC70 /* BankCardStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69CC24F75FCE0037AC70 /* BankCardStorage.swift */; };
+		478A69CF24F7624B0037AC70 /* StorageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69CE24F7624B0037AC70 /* StorageFactory.swift */; };
+		478A69D124F762C50037AC70 /* BalanceItemStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69D024F762C50037AC70 /* BalanceItemStorage.swift */; };
+		478A69D524F776580037AC70 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A69D424F776580037AC70 /* AlertHelper.swift */; };
+		47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */; };
+		47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */; };
+		47DAED1124F6013D00E538DC /* TransactionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */; };
+		47DAED1324F628D400E538DC /* BankCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED1224F628D400E538DC /* BankCardCell.swift */; };
+		47DAED1624F6348E00E538DC /* BankCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED1524F6348E00E538DC /* BankCard.swift */; };
+		47DAED1824F6353900E538DC /* TransactionUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED1724F6353900E538DC /* TransactionUsecase.swift */; };
+		4951B7E416B7A2D13D48A638 /* Pods_HeySunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */; };
+		5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7524F23A91003DC74D /* LessonCardView.swift */; };
+		5B5F8D7924F23AB6003DC74D /* LessonCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */; };
+		5B5F8D7B24F23ECD003DC74D /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7A24F23ECD003DC74D /* PlayButtonView.swift */; };
+		5B653E2324F2BDBD00E6AA21 /* HeySunnyFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E2224F2BDBD00E6AA21 /* HeySunnyFont.swift */; };
+		5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E2524F2BFB400E6AA21 /* TableViewHandler.swift */; };
+		5B653E2824F2C26B00E6AA21 /* LessonCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E2724F2C26B00E6AA21 /* LessonCardCell.swift */; };
+		5B653E2A24F3438F00E6AA21 /* DailyLearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E2924F3438F00E6AA21 /* DailyLearningView.swift */; };
+		5B653E2C24F348FB00E6AA21 /* RegularPlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E2B24F348FB00E6AA21 /* RegularPlayButtonView.swift */; };
+		5B653E2E24F3533400E6AA21 /* RetirementIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E2D24F3533400E6AA21 /* RetirementIconView.swift */; };
+		5B653E3224F3552E00E6AA21 /* FamilyPlanningIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E3124F3552E00E6AA21 /* FamilyPlanningIconView.swift */; };
+		5B653E3424F355FD00E6AA21 /* CreditCardIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E3324F355FD00E6AA21 /* CreditCardIconView.swift */; };
+		5B653E3624F3560900E6AA21 /* BudgetIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E3524F3560900E6AA21 /* BudgetIconView.swift */; };
+		5B653E3824F3561400E6AA21 /* InvestingIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B653E3724F3561400E6AA21 /* InvestingIconView.swift */; };
+		5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6F824F047C500C58D1A /* AppDelegate.swift */; };
+		5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */; };
+		5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FC24F047C500C58D1A /* ViewController.swift */; };
+		5B75C70224F047C600C58D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B75C70124F047C600C58D1A /* Assets.xcassets */; };
+		5B75C70524F047C600C58D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B75C70324F047C600C58D1A /* LaunchScreen.storyboard */; };
+		5B75C71024F047C600C58D1A /* HeySunnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C70F24F047C600C58D1A /* HeySunnyTests.swift */; };
+		5BF2935B24F5F23200D13ACE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */; };
+		5BF2935D24F5F6F600D13ACE /* LearningCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */; };
+		5BF2935F24F6256400D13ACE /* DailyLearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935E24F6256400D13ACE /* DailyLearningViewController.swift */; };
+		5BF2936824F62F8100D13ACE /* InvestingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2936724F62F8100D13ACE /* InvestingCoordinator.swift */; };
+		5BF2936A24F62F8A00D13ACE /* GoalsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2936924F62F8A00D13ACE /* GoalsCoordinator.swift */; };
+		5BF2936C24F62F9A00D13ACE /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2936B24F62F9A00D13ACE /* HomeCoordinator.swift */; };
+		5BF2936E24F62FED00D13ACE /* HeySunnyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2936D24F62FED00D13ACE /* HeySunnyIcon.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B75C70C24F047C600C58D1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B75C6ED24F047C500C58D1A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B75C6F424F047C500C58D1A;
+			remoteInfo = HeySunny;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A9C33718CF412098E4CD9C5 /* Pods-HeySunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunny.release.xcconfig"; path = "Target Support Files/Pods-HeySunny/Pods-HeySunny.release.xcconfig"; sourceTree = "<group>"; };
+		478A69C424F6EFC50037AC70 /* BalanceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceItem.swift; sourceTree = "<group>"; };
+		478A69C624F6F6E70037AC70 /* BalanceItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceItemCell.swift; sourceTree = "<group>"; };
+		478A69C924F758890037AC70 /* ExpenseConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseConfirmationViewController.swift; sourceTree = "<group>"; };
+		478A69CC24F75FCE0037AC70 /* BankCardStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardStorage.swift; sourceTree = "<group>"; };
+		478A69CE24F7624B0037AC70 /* StorageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageFactory.swift; sourceTree = "<group>"; };
+		478A69D024F762C50037AC70 /* BalanceItemStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceItemStorage.swift; sourceTree = "<group>"; };
+		478A69D424F776580037AC70 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
+		47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionsStoryboard.storyboard; sourceTree = "<group>"; };
+		47DAED1224F628D400E538DC /* BankCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardCell.swift; sourceTree = "<group>"; };
+		47DAED1524F6348E00E538DC /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
+		47DAED1724F6353900E538DC /* TransactionUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUsecase.swift; sourceTree = "<group>"; };
+		5B5F8D7524F23A91003DC74D /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
+		5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardViewModel.swift; sourceTree = "<group>"; };
+		5B5F8D7A24F23ECD003DC74D /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
+		5B653E2224F2BDBD00E6AA21 /* HeySunnyFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeySunnyFont.swift; sourceTree = "<group>"; };
+		5B653E2524F2BFB400E6AA21 /* TableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHandler.swift; sourceTree = "<group>"; };
+		5B653E2724F2C26B00E6AA21 /* LessonCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardCell.swift; sourceTree = "<group>"; };
+		5B653E2924F3438F00E6AA21 /* DailyLearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLearningView.swift; sourceTree = "<group>"; };
+		5B653E2B24F348FB00E6AA21 /* RegularPlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularPlayButtonView.swift; sourceTree = "<group>"; };
+		5B653E2D24F3533400E6AA21 /* RetirementIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetirementIconView.swift; sourceTree = "<group>"; };
+		5B653E3124F3552E00E6AA21 /* FamilyPlanningIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyPlanningIconView.swift; sourceTree = "<group>"; };
+		5B653E3324F355FD00E6AA21 /* CreditCardIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardIconView.swift; sourceTree = "<group>"; };
+		5B653E3524F3560900E6AA21 /* BudgetIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetIconView.swift; sourceTree = "<group>"; };
+		5B653E3724F3561400E6AA21 /* InvestingIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingIconView.swift; sourceTree = "<group>"; };
+		5B75C6F524F047C500C58D1A /* HeySunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeySunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B75C6F824F047C500C58D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5B75C6FC24F047C500C58D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B75C70124F047C600C58D1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B75C70424F047C600C58D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B75C70624F047C600C58D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B75C70B24F047C600C58D1A /* HeySunnyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeySunnyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B75C70F24F047C600C58D1A /* HeySunnyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeySunnyTests.swift; sourceTree = "<group>"; };
+		5B75C71124F047C600C58D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningCoordinator.swift; sourceTree = "<group>"; };
+		5BF2935E24F6256400D13ACE /* DailyLearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLearningViewController.swift; sourceTree = "<group>"; };
+		5BF2936724F62F8100D13ACE /* InvestingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestingCoordinator.swift; sourceTree = "<group>"; };
+		5BF2936924F62F8A00D13ACE /* GoalsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsCoordinator.swift; sourceTree = "<group>"; };
+		5BF2936B24F62F9A00D13ACE /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		5BF2936D24F62FED00D13ACE /* HeySunnyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeySunnyIcon.swift; sourceTree = "<group>"; };
+		6499707947DB3613173C37F9 /* Pods-HeySunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunny.debug.xcconfig"; path = "Target Support Files/Pods-HeySunny/Pods-HeySunny.debug.xcconfig"; sourceTree = "<group>"; };
+		76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeySunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B14F1B7347BB155E125D963 /* Pods-HeySunnyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunnyTests.release.xcconfig"; path = "Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests.release.xcconfig"; sourceTree = "<group>"; };
+		8C0567C6FE472B293A8C5D51 /* Pods_HeySunnyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeySunnyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68B08F4FCDA857FED3FC6FA /* Pods-HeySunnyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeySunnyTests.debug.xcconfig"; path = "Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B75C6F224F047C500C58D1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4951B7E416B7A2D13D48A638 /* Pods_HeySunny.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B75C70824F047C600C58D1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4520AA1344651B48AE57D36D /* Pods_HeySunnyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22659E42414A926BD0C857FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76EEAFA827D34ABBE4450CFC /* Pods_HeySunny.framework */,
+				8C0567C6FE472B293A8C5D51 /* Pods_HeySunnyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		478A69C324F6EF6D0037AC70 /* BalanceItem */ = {
+			isa = PBXGroup;
+			children = (
+				478A69C424F6EFC50037AC70 /* BalanceItem.swift */,
+				478A69C624F6F6E70037AC70 /* BalanceItemCell.swift */,
+			);
+			path = BalanceItem;
+			sourceTree = "<group>";
+		};
+		478A69C824F758660037AC70 /* AddExpense */ = {
+			isa = PBXGroup;
+			children = (
+				478A69C924F758890037AC70 /* ExpenseConfirmationViewController.swift */,
+			);
+			path = AddExpense;
+			sourceTree = "<group>";
+		};
+		478A69CB24F75FAB0037AC70 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				478A69CC24F75FCE0037AC70 /* BankCardStorage.swift */,
+				478A69CE24F7624B0037AC70 /* StorageFactory.swift */,
+				478A69D024F762C50037AC70 /* BalanceItemStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		47DAED0B24F6001E00E538DC /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				478A69CB24F75FAB0037AC70 /* Storage */,
+				478A69C824F758660037AC70 /* AddExpense */,
+				478A69C324F6EF6D0037AC70 /* BalanceItem */,
+				47DAED1424F6347400E538DC /* BankCard */,
+				47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */,
+				47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */,
+				47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */,
+				47DAED1724F6353900E538DC /* TransactionUsecase.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		47DAED1424F6347400E538DC /* BankCard */ = {
+			isa = PBXGroup;
+			children = (
+				47DAED1224F628D400E538DC /* BankCardCell.swift */,
+				47DAED1524F6348E00E538DC /* BankCard.swift */,
+			);
+			path = BankCard;
+			sourceTree = "<group>";
+		};
+		5B5F8D7324F23A6F003DC74D /* Daily Learning */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936024F6268700D13ACE /* Coordinators */,
+				5B653E3A24F36CC200E6AA21 /* View Controllers */,
+				5B653E2424F2BFAC00E6AA21 /* Helpers */,
+				5B5F8D7724F23AAD003DC74D /* View Models */,
+				5B5F8D7424F23A86003DC74D /* Views */,
+			);
+			path = "Daily Learning";
+			sourceTree = "<group>";
+		};
+		5B5F8D7424F23A86003DC74D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B653E3024F3550500E6AA21 /* Play Buttons */,
+				5B653E2F24F354F600E6AA21 /* Images */,
+				5B5F8D7524F23A91003DC74D /* LessonCardView.swift */,
+				5B653E2724F2C26B00E6AA21 /* LessonCardCell.swift */,
+				5B653E2924F3438F00E6AA21 /* DailyLearningView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B5F8D7724F23AAD003DC74D /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		5B653E1F24F2BC4900E6AA21 /* UI Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5B653E2224F2BDBD00E6AA21 /* HeySunnyFont.swift */,
+				5BF2936D24F62FED00D13ACE /* HeySunnyIcon.swift */,
+				478A69D424F776580037AC70 /* AlertHelper.swift */,
+			);
+			path = "UI Helpers";
+			sourceTree = "<group>";
+		};
+		5B653E2424F2BFAC00E6AA21 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5B653E2524F2BFB400E6AA21 /* TableViewHandler.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5B653E2F24F354F600E6AA21 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5B653E2D24F3533400E6AA21 /* RetirementIconView.swift */,
+				5B653E3124F3552E00E6AA21 /* FamilyPlanningIconView.swift */,
+				5B653E3324F355FD00E6AA21 /* CreditCardIconView.swift */,
+				5B653E3524F3560900E6AA21 /* BudgetIconView.swift */,
+				5B653E3724F3561400E6AA21 /* InvestingIconView.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		5B653E3024F3550500E6AA21 /* Play Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				5B5F8D7A24F23ECD003DC74D /* PlayButtonView.swift */,
+				5B653E2B24F348FB00E6AA21 /* RegularPlayButtonView.swift */,
+			);
+			path = "Play Buttons";
+			sourceTree = "<group>";
+		};
+		5B653E3A24F36CC200E6AA21 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2935E24F6256400D13ACE /* DailyLearningViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5B75C6EC24F047C500C58D1A = {
+			isa = PBXGroup;
+			children = (
+				5B75C6F724F047C500C58D1A /* HeySunny */,
+				5B75C70E24F047C600C58D1A /* HeySunnyTests */,
+				5B75C6F624F047C500C58D1A /* Products */,
+				CCA1CCAC56F33EE9D3560D58 /* Pods */,
+				22659E42414A926BD0C857FB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B75C6F624F047C500C58D1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B75C6F524F047C500C58D1A /* HeySunny.app */,
+				5B75C70B24F047C600C58D1A /* HeySunnyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B75C6F724F047C500C58D1A /* HeySunny */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936324F62F4000D13ACE /* Invest */,
+				5BF2936224F62F3D00D13ACE /* Goals */,
+				5BF2936124F62F3900D13ACE /* Home */,
+				47DAED0B24F6001E00E538DC /* Transactions */,
+				5BF2935924F5F21D00D13ACE /* Coordinators */,
+				5B653E1F24F2BC4900E6AA21 /* UI Helpers */,
+				5B5F8D7324F23A6F003DC74D /* Daily Learning */,
+				5B75C6F824F047C500C58D1A /* AppDelegate.swift */,
+				5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */,
+				5B75C6FC24F047C500C58D1A /* ViewController.swift */,
+				5B75C70124F047C600C58D1A /* Assets.xcassets */,
+				5B75C70324F047C600C58D1A /* LaunchScreen.storyboard */,
+				5B75C70624F047C600C58D1A /* Info.plist */,
+			);
+			path = HeySunny;
+			sourceTree = "<group>";
+		};
+		5B75C70E24F047C600C58D1A /* HeySunnyTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B75C70F24F047C600C58D1A /* HeySunnyTests.swift */,
+				5B75C71124F047C600C58D1A /* Info.plist */,
+			);
+			path = HeySunnyTests;
+			sourceTree = "<group>";
+		};
+		5BF2935924F5F21D00D13ACE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5BF2936024F6268700D13ACE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5BF2936124F62F3900D13ACE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936424F62F6400D13ACE /* Coordinators */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5BF2936224F62F3D00D13ACE /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936524F62F6A00D13ACE /* Coordinators */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		5BF2936324F62F4000D13ACE /* Invest */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936624F62F6F00D13ACE /* Coordinators */,
+			);
+			path = Invest;
+			sourceTree = "<group>";
+		};
+		5BF2936424F62F6400D13ACE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936B24F62F9A00D13ACE /* HomeCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5BF2936524F62F6A00D13ACE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936924F62F8A00D13ACE /* GoalsCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5BF2936624F62F6F00D13ACE /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				5BF2936724F62F8100D13ACE /* InvestingCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		CCA1CCAC56F33EE9D3560D58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6499707947DB3613173C37F9 /* Pods-HeySunny.debug.xcconfig */,
+				0A9C33718CF412098E4CD9C5 /* Pods-HeySunny.release.xcconfig */,
+				F68B08F4FCDA857FED3FC6FA /* Pods-HeySunnyTests.debug.xcconfig */,
+				8B14F1B7347BB155E125D963 /* Pods-HeySunnyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B75C6F424F047C500C58D1A /* HeySunny */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B75C71424F047C600C58D1A /* Build configuration list for PBXNativeTarget "HeySunny" */;
+			buildPhases = (
+				DB0EB0E3CCB666633C168E7D /* [CP] Check Pods Manifest.lock */,
+				5B75C6F124F047C500C58D1A /* Sources */,
+				5B75C6F224F047C500C58D1A /* Frameworks */,
+				5B75C6F324F047C500C58D1A /* Resources */,
+				4506F2E64DC3B0F1C50E0874 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeySunny;
+			productName = HeySunny;
+			productReference = 5B75C6F524F047C500C58D1A /* HeySunny.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B75C70A24F047C600C58D1A /* HeySunnyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B75C71724F047C600C58D1A /* Build configuration list for PBXNativeTarget "HeySunnyTests" */;
+			buildPhases = (
+				4B6EC014A2D2A956D052941B /* [CP] Check Pods Manifest.lock */,
+				5B75C70724F047C600C58D1A /* Sources */,
+				5B75C70824F047C600C58D1A /* Frameworks */,
+				5B75C70924F047C600C58D1A /* Resources */,
+				551327078DAFF54D71650614 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B75C70D24F047C600C58D1A /* PBXTargetDependency */,
+			);
+			name = HeySunnyTests;
+			productName = HeySunnyTests;
+			productReference = 5B75C70B24F047C600C58D1A /* HeySunnyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B75C6ED24F047C500C58D1A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Darius Ngo";
+				TargetAttributes = {
+					5B75C6F424F047C500C58D1A = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					5B75C70A24F047C600C58D1A = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 5B75C6F424F047C500C58D1A;
+					};
+				};
+			};
+			buildConfigurationList = 5B75C6F024F047C500C58D1A /* Build configuration list for PBXProject "HeySunny" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B75C6EC24F047C500C58D1A;
+			productRefGroup = 5B75C6F624F047C500C58D1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B75C6F424F047C500C58D1A /* HeySunny */,
+				5B75C70A24F047C600C58D1A /* HeySunnyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B75C6F324F047C500C58D1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B75C70524F047C600C58D1A /* LaunchScreen.storyboard in Resources */,
+				5B75C70224F047C600C58D1A /* Assets.xcassets in Resources */,
+				47DAED1124F6013D00E538DC /* TransactionsStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B75C70924F047C600C58D1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4506F2E64DC3B0F1C50E0874 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeySunny/Pods-HeySunny-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeySunny/Pods-HeySunny-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeySunny/Pods-HeySunny-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B6EC014A2D2A956D052941B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeySunnyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		551327078DAFF54D71650614 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeySunnyTests/Pods-HeySunnyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB0EB0E3CCB666633C168E7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeySunny-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B75C6F124F047C500C58D1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47DAED1324F628D400E538DC /* BankCardCell.swift in Sources */,
+				5BF2936824F62F8100D13ACE /* InvestingCoordinator.swift in Sources */,
+				5B653E2A24F3438F00E6AA21 /* DailyLearningView.swift in Sources */,
+				478A69D124F762C50037AC70 /* BalanceItemStorage.swift in Sources */,
+				5B653E2824F2C26B00E6AA21 /* LessonCardCell.swift in Sources */,
+				5B5F8D7B24F23ECD003DC74D /* PlayButtonView.swift in Sources */,
+				5B653E3224F3552E00E6AA21 /* FamilyPlanningIconView.swift in Sources */,
+				478A69CF24F7624B0037AC70 /* StorageFactory.swift in Sources */,
+				5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */,
+				5BF2936C24F62F9A00D13ACE /* HomeCoordinator.swift in Sources */,
+				5BF2935B24F5F23200D13ACE /* AppCoordinator.swift in Sources */,
+				47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */,
+				47DAED1624F6348E00E538DC /* BankCard.swift in Sources */,
+				5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */,
+				5B653E3424F355FD00E6AA21 /* CreditCardIconView.swift in Sources */,
+				478A69CA24F758890037AC70 /* ExpenseConfirmationViewController.swift in Sources */,
+				478A69C724F6F6E70037AC70 /* BalanceItemCell.swift in Sources */,
+				5BF2936A24F62F8A00D13ACE /* GoalsCoordinator.swift in Sources */,
+				478A69D524F776580037AC70 /* AlertHelper.swift in Sources */,
+				5BF2935F24F6256400D13ACE /* DailyLearningViewController.swift in Sources */,
+				5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */,
+				5B653E2E24F3533400E6AA21 /* RetirementIconView.swift in Sources */,
+				5B653E2324F2BDBD00E6AA21 /* HeySunnyFont.swift in Sources */,
+				478A69C524F6EFC50037AC70 /* BalanceItem.swift in Sources */,
+				5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */,
+				47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */,
+				5BF2936E24F62FED00D13ACE /* HeySunnyIcon.swift in Sources */,
+				5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */,
+				47DAED1824F6353900E538DC /* TransactionUsecase.swift in Sources */,
+				5B653E2C24F348FB00E6AA21 /* RegularPlayButtonView.swift in Sources */,
+				478A69CD24F75FCE0037AC70 /* BankCardStorage.swift in Sources */,
+				5B653E3824F3561400E6AA21 /* InvestingIconView.swift in Sources */,
+				5BF2935D24F5F6F600D13ACE /* LearningCoordinator.swift in Sources */,
+				5B653E3624F3560900E6AA21 /* BudgetIconView.swift in Sources */,
+				5B5F8D7924F23AB6003DC74D /* LessonCardViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B75C70724F047C600C58D1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B75C71024F047C600C58D1A /* HeySunnyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B75C70D24F047C600C58D1A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B75C6F424F047C500C58D1A /* HeySunny */;
+			targetProxy = 5B75C70C24F047C600C58D1A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B75C70324F047C600C58D1A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B75C70424F047C600C58D1A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B75C71224F047C600C58D1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B75C71324F047C600C58D1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B75C71524F047C600C58D1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6499707947DB3613173C37F9 /* Pods-HeySunny.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TWK96XA62C;
+				INFOPLIST_FILE = HeySunny/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dariusngo.rahul.HeySunny;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B75C71624F047C600C58D1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9C33718CF412098E4CD9C5 /* Pods-HeySunny.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TWK96XA62C;
+				INFOPLIST_FILE = HeySunny/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dariusngo.rahul.HeySunny;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5B75C71824F047C600C58D1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F68B08F4FCDA857FED3FC6FA /* Pods-HeySunnyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VVCX9NLVJX;
+				INFOPLIST_FILE = HeySunnyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dariusngo.HeySunnyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeySunny.app/HeySunny";
+			};
+			name = Debug;
+		};
+		5B75C71924F047C600C58D1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B14F1B7347BB155E125D963 /* Pods-HeySunnyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VVCX9NLVJX;
+				INFOPLIST_FILE = HeySunnyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dariusngo.HeySunnyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeySunny.app/HeySunny";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B75C6F024F047C500C58D1A /* Build configuration list for PBXProject "HeySunny" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B75C71224F047C600C58D1A /* Debug */,
+				5B75C71324F047C600C58D1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B75C71424F047C600C58D1A /* Build configuration list for PBXNativeTarget "HeySunny" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B75C71524F047C600C58D1A /* Debug */,
+				5B75C71624F047C600C58D1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B75C71724F047C600C58D1A /* Build configuration list for PBXNativeTarget "HeySunnyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B75C71824F047C600C58D1A /* Debug */,
+				5B75C71924F047C600C58D1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B75C6ED24F047C500C58D1A /* Project object */;
+}
