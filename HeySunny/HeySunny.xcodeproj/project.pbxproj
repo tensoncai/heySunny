@@ -49,14 +49,10 @@
 		5B726CBA24F8ABF8001F514C /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B726CB924F8ABF8001F514C /* InfoCardView.swift */; };
 		5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6F824F047C500C58D1A /* AppDelegate.swift */; };
 		5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */; };
-		5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FC24F047C500C58D1A /* ViewController.swift */; };
+		5B75C6FD24F047C500C58D1A /* InvestmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C6FC24F047C500C58D1A /* InvestmentViewController.swift */; };
 		5B75C70224F047C600C58D1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B75C70124F047C600C58D1A /* Assets.xcassets */; };
 		5B75C70524F047C600C58D1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B75C70324F047C600C58D1A /* LaunchScreen.storyboard */; };
 		5B75C71024F047C600C58D1A /* HeySunnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B75C70F24F047C600C58D1A /* HeySunnyTests.swift */; };
-		DC066ABE24F38883002F5348 /* TransferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC066ABD24F38883002F5348 /* TransferVC.swift */; };
-		DC066AC024F38892002F5348 /* TradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC066ABF24F38892002F5348 /* TradeVC.swift */; };
-		DC51F6B924F386FB000B0322 /* SummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC51F6B824F386FB000B0322 /* SummaryVC.swift */; };
-		DCA1EAAB24F84CBE00266A83 /* PelotonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1EAAA24F84CBE00266A83 /* PelotonVC.swift */; };
 		5BF2935B24F5F23200D13ACE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935A24F5F23200D13ACE /* AppCoordinator.swift */; };
 		5BF2935D24F5F6F600D13ACE /* LearningCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935C24F5F6F600D13ACE /* LearningCoordinator.swift */; };
 		5BF2935F24F6256400D13ACE /* DailyLearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2935E24F6256400D13ACE /* DailyLearningViewController.swift */; };
@@ -64,6 +60,10 @@
 		5BF2936A24F62F8A00D13ACE /* GoalsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2936924F62F8A00D13ACE /* GoalsCoordinator.swift */; };
 		5BF2936C24F62F9A00D13ACE /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2936B24F62F9A00D13ACE /* HomeCoordinator.swift */; };
 		5BF2936E24F62FED00D13ACE /* HeySunnyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2936D24F62FED00D13ACE /* HeySunnyIcon.swift */; };
+		DC066ABE24F38883002F5348 /* TransferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC066ABD24F38883002F5348 /* TransferVC.swift */; };
+		DC066AC024F38892002F5348 /* TradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC066ABF24F38892002F5348 /* TradeVC.swift */; };
+		DC51F6B924F386FB000B0322 /* SummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC51F6B824F386FB000B0322 /* SummaryVC.swift */; };
+		DCA1EAAB24F84CBE00266A83 /* PelotonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA1EAAA24F84CBE00266A83 /* PelotonVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,15 +92,15 @@
 		47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
 		47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionsStoryboard.storyboard; sourceTree = "<group>"; };
+		47DAED1224F628D400E538DC /* BankCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardCell.swift; sourceTree = "<group>"; };
+		47DAED1524F6348E00E538DC /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
+		47DAED1724F6353900E538DC /* TransactionUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUsecase.swift; sourceTree = "<group>"; };
 		5B4AF0AF24F7711A00BDEF91 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		5B4AF0B124F7713800BDEF91 /* LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
 		5B4AF0B324F7714E00BDEF91 /* LessonCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCoordinator.swift; sourceTree = "<group>"; };
 		5B4AF0B724F785E300BDEF91 /* LessonLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLevelViewController.swift; sourceTree = "<group>"; };
 		5B4AF0B924F7868200BDEF91 /* LessonLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLevelView.swift; sourceTree = "<group>"; };
 		5B4AF0BB24F7894900BDEF91 /* LessonLevelCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLevelCardCell.swift; sourceTree = "<group>"; };
-		47DAED1224F628D400E538DC /* BankCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardCell.swift; sourceTree = "<group>"; };
-		47DAED1524F6348E00E538DC /* BankCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCard.swift; sourceTree = "<group>"; };
-		47DAED1724F6353900E538DC /* TransactionUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionUsecase.swift; sourceTree = "<group>"; };
 		5B5F8D7524F23A91003DC74D /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
 		5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardViewModel.swift; sourceTree = "<group>"; };
 		5B5F8D7A24F23ECD003DC74D /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		5B75C6F524F047C500C58D1A /* HeySunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeySunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B75C6F824F047C500C58D1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B75C6FC24F047C500C58D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B75C6FC24F047C500C58D1A /* InvestmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentViewController.swift; sourceTree = "<group>"; };
 		5B75C70124F047C600C58D1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B75C70424F047C600C58D1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B75C70624F047C600C58D1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -358,14 +358,9 @@
 				5B5F8D7324F23A6F003DC74D /* Daily Learning */,
 				5B75C6F824F047C500C58D1A /* AppDelegate.swift */,
 				5B75C6FA24F047C500C58D1A /* SceneDelegate.swift */,
-				5B75C6FC24F047C500C58D1A /* ViewController.swift */,
 				5B75C70124F047C600C58D1A /* Assets.xcassets */,
 				5B75C70324F047C600C58D1A /* LaunchScreen.storyboard */,
 				5B75C70624F047C600C58D1A /* Info.plist */,
-				DC51F6B824F386FB000B0322 /* SummaryVC.swift */,
-				DC066ABD24F38883002F5348 /* TransferVC.swift */,
-				DC066ABF24F38892002F5348 /* TradeVC.swift */,
-				DCA1EAAA24F84CBE00266A83 /* PelotonVC.swift */,
 			);
 			path = HeySunny;
 			sourceTree = "<group>";
@@ -415,6 +410,11 @@
 		5BF2936324F62F4000D13ACE /* Invest */ = {
 			isa = PBXGroup;
 			children = (
+				5B75C6FC24F047C500C58D1A /* InvestmentViewController.swift */,
+				DC51F6B824F386FB000B0322 /* SummaryVC.swift */,
+				DC066ABD24F38883002F5348 /* TransferVC.swift */,
+				DC066ABF24F38892002F5348 /* TradeVC.swift */,
+				DCA1EAAA24F84CBE00266A83 /* PelotonVC.swift */,
 				5BF2936624F62F6F00D13ACE /* Coordinators */,
 			);
 			path = Invest;
@@ -596,23 +596,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5142FF727713279A56F48CF3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeySunny/Pods-HeySunny-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeySunny/Pods-HeySunny-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeySunny/Pods-HeySunny-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		551327078DAFF54D71650614 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -690,7 +673,7 @@
 				5BF2936A24F62F8A00D13ACE /* GoalsCoordinator.swift in Sources */,
 				478A69D524F776580037AC70 /* AlertHelper.swift in Sources */,
 				5BF2935F24F6256400D13ACE /* DailyLearningViewController.swift in Sources */,
-				5B75C6FD24F047C500C58D1A /* ViewController.swift in Sources */,
+				5B75C6FD24F047C500C58D1A /* InvestmentViewController.swift in Sources */,
 				5B4AF0BC24F7894900BDEF91 /* LessonLevelCardCell.swift in Sources */,
 				5B653E2E24F3533400E6AA21 /* RetirementIconView.swift in Sources */,
 				5B653E2324F2BDBD00E6AA21 /* HeySunnyFont.swift in Sources */,

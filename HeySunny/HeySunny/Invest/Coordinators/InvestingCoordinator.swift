@@ -9,7 +9,7 @@
 import XCoordinator
 
 enum InvestingRoute: Route {
-    case news
+    case invest
 }
 
 class InvestingCoordinator: NavigationCoordinator<InvestingRoute> {
@@ -17,15 +17,15 @@ class InvestingCoordinator: NavigationCoordinator<InvestingRoute> {
     // MARK: Initialization
 
     init() {
-        super.init(initialRoute: .news)
+        super.init(initialRoute: .invest)
     }
 
     // MARK: Overrides
 
     override func prepareTransition(for route: InvestingRoute) -> NavigationTransition {
         switch route {
-        case .news:
-            let viewController = LessonViewController()
+        case .invest:
+            let viewController = InvestmentViewController()
             return .push(viewController)
         }
     }

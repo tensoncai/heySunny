@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class InvestmentViewController: UIViewController {
     let tabs = ["Summary", "Transfer", "Trade"]
     let stackView = UIStackView()
     var segmentedControl: UISegmentedControl!
