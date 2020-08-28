@@ -21,7 +21,7 @@ class LinkCreditCardViewController: UIViewController {
     
     @IBAction func actionGetStarted(_ sender: Any) {
         let permission: Permission = .camera
-        permission.request { [unowned self] status in
+        permission.request { status in
             switch status {
             case .authorized:
                 let tapFullScreenCustomiser:TapFullScreenUICustomizer = TapFullScreenUICustomizer()
