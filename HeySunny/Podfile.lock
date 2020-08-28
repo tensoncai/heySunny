@@ -2,11 +2,16 @@ PODS:
   - Charts (3.5.0):
     - Charts/Core (= 3.5.0)
   - Charts/Core (3.5.0)
+  - CommonDataModelsKit-iOS (1.0.31)
+  - PayCardsRecognizer (1.1.7)
   - Permission (3.1.2):
     - Permission/Core (= 3.1.2)
   - Permission/Camera (3.1.2):
     - Permission/Core
   - Permission/Core (3.1.2)
+  - TapCardScanner-iOS (1.0.9):
+    - CommonDataModelsKit-iOS (~> 1.0.1)
+    - PayCardsRecognizer (~> 1.1.7)
   - UPCarouselFlowLayout (1.1.2)
   - WeScan (1.7.0)
   - XCoordinator (2.0.7):
@@ -17,6 +22,7 @@ DEPENDENCIES:
   - Charts
   - Permission (~> 3.1)
   - Permission/Camera
+  - TapCardScanner-iOS (~> 1.0)
   - UPCarouselFlowLayout
   - WeScan (>= 0.9)
   - XCoordinator
@@ -24,18 +30,24 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Charts
+    - CommonDataModelsKit-iOS
+    - PayCardsRecognizer
     - Permission
+    - TapCardScanner-iOS
     - UPCarouselFlowLayout
     - WeScan
     - XCoordinator
 
 SPEC CHECKSUMS:
   Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  CommonDataModelsKit-iOS: 4b1a33cd07686bcd8117f1f1ebe18373bda16af5
+  PayCardsRecognizer: 2e4d1b2fdd5f1528fb56064a91e1d58a1af7a2db
   Permission: 4821359fb4d4367fb59aa16df38fbba5722ac842
+  TapCardScanner-iOS: b76229bf85071779a0a8631da76d933da608fb97
   UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
   WeScan: fed582f6c38014d529afb5aa9ffd1bad38fc72b7
   XCoordinator: 9ee654fedef1ffede33d5c11677708a555c00542
 
-PODFILE CHECKSUM: e9d901c8e0e4066e1df5dbcc17280333d8b76d67
+PODFILE CHECKSUM: c80bd770ef3e4320d1f322d8b2423ca5a8a1c656
 
 COCOAPODS: 1.9.1

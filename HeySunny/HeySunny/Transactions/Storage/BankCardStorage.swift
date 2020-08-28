@@ -10,6 +10,7 @@ import Foundation
 
 protocol BankCardStorage {
     func get() -> [BankCard]
+    func add(_ bankCard: BankCard)
 }
 
 // for demo
@@ -29,5 +30,9 @@ class InMemoryBankCardStorage: BankCardStorage {
     
     func get() -> [BankCard] {
         return datasource
+    }
+    
+    func add(_ bankCard: BankCard) {
+        datasource.append(bankCard)
     }
 }

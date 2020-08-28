@@ -112,7 +112,6 @@
         <!--View Controller-->
         <scene sceneID="SeO-CD-T76">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pF5-qn-PDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Tutorial1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uLI-BZ-8SW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eoe-bR-ad5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -186,6 +185,7 @@
                         <viewLayoutGuide key="safeArea" id="mOV-07-ofM"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pF5-qn-PDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-420" y="-74"/>
         </scene>
