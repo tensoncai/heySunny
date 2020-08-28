@@ -73,11 +73,11 @@ class SummaryVC: UIViewController, ChartViewDelegate, UITableViewDelegate , UITa
         }
         
         let set = LineChartDataSet(entries: entries)
-        set.colors = [UIColor(red: 153/255, green: 50/255, blue: 204/255, alpha: 1)]
+        set.colors = [UIColor(red: 97/255, green: 108/255, blue: 218/255, alpha: 1)]
         set.drawCirclesEnabled = false
         
         let data = LineChartData(dataSet: set)
-        let gradientColors = [CGColor(srgbRed: 153/255, green: 50/255, blue: 204/255, alpha: 1), UIColor.clear.cgColor] as CFArray // Colors of the gradient
+        let gradientColors = [CGColor(srgbRed: 97/255, green: 108/255, blue: 218/255, alpha: 1), UIColor.clear.cgColor] as CFArray // Colors of the gradient
         let colorLocations:[CGFloat] = [1.0, 0.0] // Positioning of the gradient
         let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations) // Gradient Object
         set.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0) // Set the Gradient
