@@ -50,6 +50,10 @@ class LinkCreditCardViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func actionDoThisLater(_ sender: Any) {
+        router.trigger(.main)
+    }
 }
 
 extension LinkCreditCardViewController: ImageScannerControllerDelegate {
