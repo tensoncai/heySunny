@@ -8,14 +8,20 @@
 
 import UIKit
 
+protocol DailyLearningViewDelegate: NSObject {
+    func showLesson()
+}
+
 class DailyLearningView: UIView {
     private let recommendedLessonLabel: UILabel
     private let recommendedLessonView: LessonCardView
     private let allLessonsLabel: UILabel
     private let tableContainerView: UIView
     private let lessonsTableView: UITableView
+    private weak var delegate: DailyLearningViewDelegate?
     
-    init(handler: TableViewHandler) {
+    init(handler: TableViewHandler, delegate: DailyLearningViewDelegate) {
+        self.delegate = delegate
         recommendedLessonLabel = Self.makeHeaderLabel(withText: "Today's Recommended Lesson For You:")
         recommendedLessonView = LessonCardView(using: LessonCardViewModel(title: "Retirement Planning", level: "Level 0/10", image: RetirementIconView()))
         allLessonsLabel = Self.makeHeaderLabel(withText: "All Lessons:")
@@ -25,10 +31,17 @@ class DailyLearningView: UIView {
         super.init(frame: .zero)
         
         setup()
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(showLesson))
+        self.recommendedLessonView.addGestureRecognizer(gesture)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc private func showLesson() {
+        delegate?.showLesson()
     }
     
     private func setup() {
@@ -183,7 +196,7 @@ class DailyLearningView: UIView {
     
     private func makeTableContainerViewConstraints() -> [NSLayoutConstraint] {
         let topAnchorConstraint = tableContainerView.topAnchor.constraint(equalTo: allLessonsLabel.bottomAnchor, constant: 25)
-        let bottomAnchorConstraint = tableContainerView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50)
+        let bottomAnchorConstraint = tableContainerView.bottomAnchor.constraint(equalTo: bottomAnchor)
         let leadingAnchorConstraint = tableContainerView.leadingAnchor.constraint(equalTo: leadingAnchor)
         let trailingAnchorConstraint = tableContainerView.trailingAnchor.constraint(equalTo: trailingAnchor)
         

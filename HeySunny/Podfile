@@ -6,13 +6,22 @@ target 'HeySunny' do
   use_frameworks!
 
   # Pods for HeySunny
-  
   pod 'Charts'
-  
+  pod 'XCoordinator'
+  pod "UPCarouselFlowLayout"
+  pod 'WeScan', '>= 0.9'
+  pod 'Permission', '~> 3.1'
+  pod 'Permission/Camera'
+  pod 'M13Checkbox'
+
   target 'HeySunnyTests' do
     inherit! :search_paths
-    
+
     pod 'XCoordinator'
+    pod "UPCarouselFlowLayout"
+    pod 'WeScan', '>= 0.9'
+    pod 'Permission', '~> 3.1'
+    pod 'Permission/Camera'
     # Pods for testing
   end
 
