@@ -168,6 +168,13 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		478D3BD424F8992C000A27C0 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		47DAED0B24F6001E00E538DC /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +301,7 @@
 		5B75C6F724F047C500C58D1A /* HeySunny */ = {
 			isa = PBXGroup;
 			children = (
+				478D3BD424F8992C000A27C0 /* Tutorial */,
 				5BF2936324F62F4000D13ACE /* Invest */,
 				5BF2936224F62F3D00D13ACE /* Goals */,
 				5BF2936124F62F3900D13ACE /* Home */,
