@@ -32,7 +32,10 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
             return .presentFullScreen(viewController)
         case .main:
             let router = MainCoordinator()
-            return .presentFullScreen(router)
+            return .multiple(
+                .dismissAll(),
+                .presentFullScreen(router)
+            )
         }
     }
 }
