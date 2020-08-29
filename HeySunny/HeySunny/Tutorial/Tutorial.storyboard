@@ -95,7 +95,7 @@
                         <outlet property="btnSignUp" destination="4Dz-tw-P4C" id="QTX-Br-xpU"/>
                         <outlet property="btnSkip" destination="ems-WD-fAU" id="1qh-2h-PMd"/>
                         <outlet property="pageControl" destination="yoL-A5-Qta" id="u1J-re-rVg"/>
-                        <segue destination="DEg-v0-yTD" kind="show" identifier="CompletedId" id="BXb-hK-bCa"/>
+                        <segue destination="DEg-v0-yTD" kind="presentation" identifier="CompletedId" modalPresentationStyle="fullScreen" id="BXb-hK-bCa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RtU-Pv-vvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

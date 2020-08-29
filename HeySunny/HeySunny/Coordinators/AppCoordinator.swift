@@ -28,8 +28,8 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
         case .tutorial:
             let viewController = UIStoryboard(name: "Tutorial", bundle:nil).instantiateViewController(withIdentifier: "TutorialViewControllerId") as! TutorialContinaerViewController
             viewController.router = unownedRouter
-            
-            return .push(viewController)
+        
+            return .presentFullScreen(viewController)
         case .main:
             let router = MainCoordinator()
             return .presentFullScreen(router)
