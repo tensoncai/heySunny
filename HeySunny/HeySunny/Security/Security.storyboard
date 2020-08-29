@@ -265,7 +265,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7EH-qH-3oX"/>
                     <connections>
-                        <segue destination="lIO-ot-bRz" kind="show" id="kiR-EN-eVQ"/>
+                        <segue destination="lIO-ot-bRz" kind="show" identifier="ConfirmLinkAccountId" id="kiR-EN-eVQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Heq-KC-SZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

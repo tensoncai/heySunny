@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import XCoordinator
 
 class LinkExternalAccountViewController: UIViewController {
 
+    var router: UnownedRouter<AppRoute>!
     var bankCard: BankCard?
     
     @IBOutlet weak var lblAmount: UILabel!
