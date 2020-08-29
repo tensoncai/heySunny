@@ -176,7 +176,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe to learn more" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO1-mh-rKv">
-                                <rect key="frame" x="132" y="833" width="191.5" height="29"/>
+                                <rect key="frame" x="111.5" y="833" width="191.5" height="29"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="21"/>
                                 <color key="textColor" red="0.35294377799999999" green="0.35293650630000001" blue="0.3529414535" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -190,7 +190,7 @@
                             <constraint firstItem="egl-Ot-EXF" firstAttribute="top" secondItem="ZtO-kO-Gdv" secondAttribute="bottom" constant="-75" id="GLy-ut-lCQ"/>
                             <constraint firstItem="egl-Ot-EXF" firstAttribute="centerY" secondItem="eoe-bR-ad5" secondAttribute="centerY" multiplier="0.85" id="H17-HX-f55"/>
                             <constraint firstItem="Rhy-v1-SlE" firstAttribute="top" secondItem="egl-Ot-EXF" secondAttribute="bottom" constant="10" id="a9E-aq-h2A"/>
-                            <constraint firstItem="JO1-mh-rKv" firstAttribute="centerX" secondItem="egl-Ot-EXF" secondAttribute="centerX" id="j6x-f4-mIq"/>
+                            <constraint firstItem="JO1-mh-rKv" firstAttribute="centerX" secondItem="eoe-bR-ad5" secondAttribute="centerX" id="j6x-f4-mIq"/>
                             <constraint firstItem="Rhy-v1-SlE" firstAttribute="centerX" secondItem="eoe-bR-ad5" secondAttribute="centerX" id="yQF-li-y6A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mOV-07-ofM"/>
