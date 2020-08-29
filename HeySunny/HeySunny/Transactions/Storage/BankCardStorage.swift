@@ -10,6 +10,7 @@ import Foundation
 
 protocol BankCardStorage {
     func get() -> [BankCard]
+    func add(_ bankCard: BankCard)
 }
 
 // for demo
@@ -20,14 +21,14 @@ class InMemoryBankCardStorage: BankCardStorage {
     private var datasource = [BankCard]()
 
     private init() {
-          datasource.append(BankCard.init(amount: 1209.80, logo: "ChaseLogo", autoPayEnrolled: false, date: "11/23", creditCardLastFour: "8921", background: "Credit"))
-          
-          datasource.append(BankCard.init(amount: 500, logo: nil, autoPayEnrolled: false, date: "12/02", creditCardLastFour: "4206", background: "Credit"))
-          
-          datasource.append(BankCard.init(amount: 10000.44, logo: nil, autoPayEnrolled: false, date: "01/23", creditCardLastFour: "3823", background: "Credit"))
+//          datasource.append(BankCard.init(amount: 1209.80, logo: "ChaseLogo", autoPayEnrolled: false, date: "11/23", creditCardLastFour: "8921", background: "Credit"))
     }
     
     func get() -> [BankCard] {
         return datasource
+    }
+    
+    func add(_ bankCard: BankCard) {
+        datasource.append(bankCard)
     }
 }

@@ -51,6 +51,10 @@ class TutorialContinaerViewController: UIViewController {
             destinationVC.indexDelegate = self
             pageFlipperDelegate = destinationVC
         }
+        
+        if let destinationVC = segue.destination as? SecurityViewController {
+            destinationVC.router = router
+        }
     }
     
     @objc func actionGoToNext() {
@@ -59,12 +63,12 @@ class TutorialContinaerViewController: UIViewController {
         pageControl.currentPage += 1
         currentPage += 1
         if currentPage == 5 {
-            router.trigger(.main)
+            performSegue(withIdentifier: "CompletedId", sender: nil)
         }
     }
     
     @objc func actionSkip() {
-        router.trigger(.main)
+        performSegue(withIdentifier: "CompletedId", sender: nil)
     }
 }
 
