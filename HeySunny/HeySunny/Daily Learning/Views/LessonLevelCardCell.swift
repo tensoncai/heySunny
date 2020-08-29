@@ -17,6 +17,7 @@ protocol LessonLevelCardCellModel {
     var title: String { get }
     var description: String { get }
     var buttonTitle: String { get }
+    var buttonAction: (() -> Void)? { get }
 }
 
 struct InfoLevelCellModel: LessonLevelCardCellModel {
@@ -24,6 +25,7 @@ struct InfoLevelCellModel: LessonLevelCardCellModel {
     let description: String
     let bottomDescription: String
     let buttonTitle: String
+    let buttonAction: (() -> Void)?
 }
 
 struct QuestionLevelCellModel: LessonLevelCardCellModel {
@@ -31,6 +33,7 @@ struct QuestionLevelCellModel: LessonLevelCardCellModel {
     let description: String
     let questions: [String]
     let buttonTitle: String
+    let buttonAction: (() -> Void)?
 }
 
 struct InfoWithImageCellModel: LessonLevelCardCellModel {
@@ -38,6 +41,7 @@ struct InfoWithImageCellModel: LessonLevelCardCellModel {
     let description: String
     let image: UIImage?
     let buttonTitle: String
+    let buttonAction: (() -> Void)?
 }
 
 class LessonLevelCardCell: UICollectionViewCell {
@@ -47,6 +51,7 @@ class LessonLevelCardCell: UICollectionViewCell {
     private var cellImageView: UIImageView!
     private var questionStackView: UIStackView!
     private var continueButton: UIButton!
+    private var buttonAction: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -69,7 +74,8 @@ class LessonLevelCardCell: UICollectionViewCell {
         default:
             return
         }
-
+        
+        buttonAction = model.buttonAction
         descriptionLabel.text = model.description
         setupConstraints()
     }
@@ -217,6 +223,7 @@ private extension LessonLevelCardCell {
         button.backgroundColor = UIColor(red: 0.918, green: 0.38, blue: 0.306, alpha: 1)
         button.layer.cornerRadius = 25
         button.titleLabel?.font = HeySunnyFont.section.font
+        button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         
         continueButton = button
         
@@ -252,6 +259,11 @@ private extension LessonLevelCardCell {
             bottomDescriptionLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 24),
             bottomDescriptionLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -24),
         ])
+    }
+    
+    @objc private func didTapButton() {
+        print("touched")
+        buttonAction?()
     }
 }
 

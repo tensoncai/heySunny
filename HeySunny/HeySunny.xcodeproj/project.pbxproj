@@ -37,6 +37,7 @@
 		5B4AF0B824F785E300BDEF91 /* LessonLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0B724F785E300BDEF91 /* LessonLevelViewController.swift */; };
 		5B4AF0BA24F7868200BDEF91 /* LessonLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0B924F7868200BDEF91 /* LessonLevelView.swift */; };
 		5B4AF0BC24F7894900BDEF91 /* LessonLevelCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AF0BB24F7894900BDEF91 /* LessonLevelCardCell.swift */; };
+		5B5D8A1B24F9B9BA00825F82 /* successAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B5D8A1A24F9B9BA00825F82 /* successAnimation.json */; };
 		5B5F8D7624F23A91003DC74D /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7524F23A91003DC74D /* LessonCardView.swift */; };
 		5B5F8D7924F23AB6003DC74D /* LessonCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */; };
 		5B5F8D7B24F23ECD003DC74D /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F8D7A24F23ECD003DC74D /* PlayButtonView.swift */; };
@@ -111,6 +112,7 @@
 		5B4AF0B724F785E300BDEF91 /* LessonLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLevelViewController.swift; sourceTree = "<group>"; };
 		5B4AF0B924F7868200BDEF91 /* LessonLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLevelView.swift; sourceTree = "<group>"; };
 		5B4AF0BB24F7894900BDEF91 /* LessonLevelCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonLevelCardCell.swift; sourceTree = "<group>"; };
+		5B5D8A1A24F9B9BA00825F82 /* successAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = successAnimation.json; sourceTree = "<group>"; };
 		5B5F8D7524F23A91003DC74D /* LessonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
 		5B5F8D7824F23AB6003DC74D /* LessonCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCardViewModel.swift; sourceTree = "<group>"; };
 		5B5F8D7A24F23ECD003DC74D /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
@@ -268,6 +270,14 @@
 			path = BankCard;
 			sourceTree = "<group>";
 		};
+		5B5D8A1924F9B9A700825F82 /* Lottie Animations */ = {
+			isa = PBXGroup;
+			children = (
+				5B5D8A1A24F9B9BA00825F82 /* successAnimation.json */,
+			);
+			path = "Lottie Animations";
+			sourceTree = "<group>";
+		};
 		5B5F8D7324F23A6F003DC74D /* Daily Learning */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +387,7 @@
 		5B75C6F724F047C500C58D1A /* HeySunny */ = {
 			isa = PBXGroup;
 			children = (
+				5B5D8A1924F9B9A700825F82 /* Lottie Animations */,
 				478D3BDF24F8CCCE000A27C0 /* Security */,
 				478D3BD424F8992C000A27C0 /* Tutorial */,
 				5BF2936324F62F4000D13ACE /* Invest */,
@@ -571,6 +582,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5D8A1B24F9B9BA00825F82 /* successAnimation.json in Resources */,
 				5B75C70524F047C600C58D1A /* LaunchScreen.storyboard in Resources */,
 				5B75C70224F047C600C58D1A /* Assets.xcassets in Resources */,
 				478D3BD824F89B69000A27C0 /* Tutorial.storyboard in Resources */,
