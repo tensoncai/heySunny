@@ -29,6 +29,11 @@ class TransactionsViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -84,13 +89,13 @@ class TransactionsViewController: UIViewController {
 
 extension TransactionsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return usecase.bankCardsDataSource.count
+        return usecase.getBankCardsSource().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BankCardCell", for: indexPath) as! BankCardCell
         
-        let bankCard = usecase.bankCardsDataSource[indexPath.row]
+        let bankCard = usecase.getBankCardsSource()[indexPath.row]
         cell.setup(bankCard: bankCard)
         
         return cell

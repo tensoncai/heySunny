@@ -15,14 +15,9 @@ enum AppRoute: Route {
 }
 
 class AppCoordinator: NavigationCoordinator<AppRoute> {
-    
-    // MARK: Stored properties
-    private let mainCoordinator: TabBarCoordinator<MainRoute>
-    
     // MARK: Initialization
     
     init() {
-        mainCoordinator = MainCoordinator()
         super.init(initialRoute: .tutorial)
     }
 
@@ -33,10 +28,11 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
         case .tutorial:
             let viewController = UIStoryboard(name: "Tutorial", bundle:nil).instantiateViewController(withIdentifier: "TutorialViewControllerId") as! TutorialContinaerViewController
             viewController.router = unownedRouter
-            
-            return .push(viewController)
+        
+            return .presentFullScreen(viewController)
         case .main:
-            return .set([mainCoordinator])
+            let router = MainCoordinator()
+            return .presentFullScreen(router)
         }
     }
 }

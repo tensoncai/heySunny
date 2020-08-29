@@ -29,6 +29,7 @@ class LessonLevelView: UIView {
     let infoCardView: InfoCardView
     let cardCollectionView: UICollectionView
     let pageControl: UIPageControl
+    var currentCard = 0
     
     var translationX: CGFloat {
         UIScreen.main.bounds.size.width
@@ -37,7 +38,7 @@ class LessonLevelView: UIView {
     init(delegate: LessonViewDelegate) {
         titleLabel = Self.makeLabel(withText: "Retirement Planning", font: .headline)
         levelLabel = Self.makeLabel(withText: "Level 1: Account Types", font: .section)
-        infoCardView = InfoCardView(delegate: delegate, model: InfoLevelCellModel(title: "Saving for Retirement...", description: "Isn’t a “one-size fits all” plan. Your situation is unique depending on your job circumstance, income level, age, and your personal goals.", bottomDescription: "This lesson will take about 4 mins", buttonTitle: "Got it!"))
+        infoCardView = InfoCardView(delegate: delegate, model: InfoLevelCellModel(title: "Saving for Retirement...", description: "Isn’t a “one-size fits all” plan. Your situation is unique depending on your job circumstance, income level, age, and your personal goals.", bottomDescription: "This lesson will take about 4 mins", buttonTitle: "Got it!", buttonAction: nil))
         cardCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UPCarouselFlowLayout.make(withSize: CGSize(width: 320, height: 544)))
         cardCollectionView.dataSource = delegate
         cardCollectionView.delegate = delegate
@@ -59,14 +60,14 @@ class LessonLevelView: UIView {
         pageControl.customPageControl(dotFillColor: color, dotBorderColor: color, dotBorderWidth: 1)
         
         UIView.animate(
-          withDuration: 1,
+          withDuration: 0.5,
           animations: {
             self.infoCardView.transform = CGAffineTransform(translationX: -self.translationX, y: 0)
             self.cardCollectionView.transform = .identity
             self.pageControl.alpha = 1
             self.pageControl.isHidden = false
         }, completion: { _ in
-            
+            self.infoCardView.isHidden = true
         })
     }
     
