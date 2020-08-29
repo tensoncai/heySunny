@@ -15,6 +15,7 @@ import XCoordinator
 class LinkCreditCardViewController: UIViewController {
 
     var router: UnownedRouter<AppRoute>!
+    var bankCard: BankCard?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,24 +25,25 @@ class LinkCreditCardViewController: UIViewController {
     
     @IBAction func actionGetStarted(_ sender: Any) {
         let permission: Permission = .camera
-        permission.request { status in
+        permission.request { [unowned self] status in
             switch status {
             case .authorized:
-                let tapFullScreenCustomiser:TapFullScreenUICustomizer = TapFullScreenUICustomizer()
-                tapFullScreenCustomiser.tapFullScreenCancelButtonTitle = "Cancel"
-                tapFullScreenCustomiser.tapFullScreenCancelButtonFont = HeySunnyFont.subHeadline.font!
-                tapFullScreenCustomiser.tapFullScreenCancelButtonTitleColor = .white
-                tapFullScreenCustomiser.tapFullScreenCancelButtonHolderViewColor = .black
-                tapFullScreenCustomiser.tapFullScreenScanBorderColor = .white
-                let fullScanner:TapFullScreenCardScanner = TapFullScreenCardScanner()
                 
+                let tapFullScreenCustomiser = self.getFullScreenCardScanner()
+                
+                let fullScanner:TapFullScreenCardScanner = TapFullScreenCardScanner()
+
                 try? fullScanner.showModalScreen(presenter: self, tapFullCardScannerDimissed: nil, tapCardScannerDidFinish: { [weak self] (scannedCard) in
                     let bankCard = BankCard(amount: 1200, logo: nil, autoPayEnrolled: false, date: (scannedCard.tapCardExpiryMonth ?? "??") + "/" + (scannedCard.tapCardExpiryYear ?? "??"), creditCardLastFour: String(scannedCard.tapCardNumber?.suffix(4) ?? "????"), background: "Credit")
                     
                     let bankCardStorage = StorageFactory.getBankCardStorage()
                     
+                    self?.bankCard = bankCard
                     bankCardStorage.add(bankCard)
-                    self?.router.trigger(.main)
+                    
+                    self?.dismiss(animated: true, completion: {
+                        self?.performSegue(withIdentifier: "ConfirmLinkAccountId", sender: nil)
+                    })
                     
                     }, scannerUICustomization: tapFullScreenCustomiser)
                 
@@ -49,6 +51,25 @@ class LinkCreditCardViewController: UIViewController {
                 break
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? LinkExternalAccountViewController {
+            destinationVC.router = router
+            destinationVC.bankCard = bankCard
+        }
+    }
+    
+    private func getFullScreenCardScanner() -> TapFullScreenUICustomizer {
+        let tapFullScreenCustomiser:TapFullScreenUICustomizer = TapFullScreenUICustomizer()
+        tapFullScreenCustomiser.tapFullScreenCancelButtonTitle = "Cancel"
+        tapFullScreenCustomiser.tapFullScreenCancelButtonFont = HeySunnyFont.subHeadline.font!
+        tapFullScreenCustomiser.tapFullScreenCancelButtonTitleColor = .white
+        tapFullScreenCustomiser.tapFullScreenCancelButtonHolderViewColor = .black
+        tapFullScreenCustomiser.tapFullScreenScanBorderColor = .white
+        
+        
+        return tapFullScreenCustomiser
     }
     
     @IBAction func actionDoThisLater(_ sender: Any) {

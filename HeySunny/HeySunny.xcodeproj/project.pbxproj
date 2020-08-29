@@ -22,6 +22,8 @@
 		478D3BE124F8CCF2000A27C0 /* Security.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478D3BE024F8CCF2000A27C0 /* Security.storyboard */; };
 		478D3BE324F8D174000A27C0 /* LinkCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D3BE224F8D174000A27C0 /* LinkCreditCardViewController.swift */; };
 		478D3BE524F8E0A2000A27C0 /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D3BE424F8E0A2000A27C0 /* SecurityViewController.swift */; };
+		47C26B7C24F9D8D1000656F9 /* LinkExternalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C26B7B24F9D8D1000656F9 /* LinkExternalAccountViewController.swift */; };
+		47C26B7E24F9E773000656F9 /* ConfirmNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C26B7D24F9E773000656F9 /* ConfirmNumberViewController.swift */; };
 		47DAED0D24F6007C00E538DC /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */; };
 		47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */; };
 		47DAED1124F6013D00E538DC /* TransactionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */; };
@@ -97,6 +99,8 @@
 		478D3BE024F8CCF2000A27C0 /* Security.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Security.storyboard; sourceTree = "<group>"; };
 		478D3BE224F8D174000A27C0 /* LinkCreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCreditCardViewController.swift; sourceTree = "<group>"; };
 		478D3BE424F8E0A2000A27C0 /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
+		47C26B7B24F9D8D1000656F9 /* LinkExternalAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExternalAccountViewController.swift; sourceTree = "<group>"; };
+		47C26B7D24F9E773000656F9 /* ConfirmNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmNumberViewController.swift; sourceTree = "<group>"; };
 		47DAED0C24F6007C00E538DC /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		47DAED0E24F6011A00E538DC /* TransactionsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsCoordinator.swift; sourceTree = "<group>"; };
 		47DAED1024F6013D00E538DC /* TransactionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -228,11 +232,21 @@
 		478D3BDF24F8CCCE000A27C0 /* Security */ = {
 			isa = PBXGroup;
 			children = (
+				47C26B7A24F9D0FF000656F9 /* AccountCreation */,
 				478D3BE024F8CCF2000A27C0 /* Security.storyboard */,
 				478D3BE224F8D174000A27C0 /* LinkCreditCardViewController.swift */,
 				478D3BE424F8E0A2000A27C0 /* SecurityViewController.swift */,
 			);
 			path = Security;
+			sourceTree = "<group>";
+		};
+		47C26B7A24F9D0FF000656F9 /* AccountCreation */ = {
+			isa = PBXGroup;
+			children = (
+				47C26B7B24F9D8D1000656F9 /* LinkExternalAccountViewController.swift */,
+				47C26B7D24F9E773000656F9 /* ConfirmNumberViewController.swift */,
+			);
+			path = AccountCreation;
 			sourceTree = "<group>";
 		};
 		47DAED0B24F6001E00E538DC /* Transactions */ = {
@@ -698,6 +712,7 @@
 				478D3BDC24F8A33C000A27C0 /* TutorialCoordinator.swift in Sources */,
 				47DAED1624F6348E00E538DC /* BankCard.swift in Sources */,
 				5B653E2624F2BFB400E6AA21 /* TableViewHandler.swift in Sources */,
+				47C26B7C24F9D8D1000656F9 /* LinkExternalAccountViewController.swift in Sources */,
 				478D3BDA24F89E87000A27C0 /* TutorialPageViewController.swift in Sources */,
 				DC066AC024F38892002F5348 /* TradeVC.swift in Sources */,
 				DC066ABE24F38883002F5348 /* TransferVC.swift in Sources */,
@@ -715,6 +730,7 @@
 				478A69C524F6EFC50037AC70 /* BalanceItem.swift in Sources */,
 				5B75C6F924F047C500C58D1A /* AppDelegate.swift in Sources */,
 				47DAED0F24F6011A00E538DC /* TransactionsCoordinator.swift in Sources */,
+				47C26B7E24F9E773000656F9 /* ConfirmNumberViewController.swift in Sources */,
 				5BF2936E24F62FED00D13ACE /* HeySunnyIcon.swift in Sources */,
 				5B75C6FB24F047C500C58D1A /* SceneDelegate.swift in Sources */,
 				478D3BDE24F8B8B6000A27C0 /* TutorialContinaerViewController.swift in Sources */,
