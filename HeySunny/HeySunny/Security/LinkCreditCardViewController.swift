@@ -39,7 +39,9 @@ class LinkCreditCardViewController: UIViewController {
                     
                     bankCardStorage.add(bankCard)
                     
-                    self?.performSegue(withIdentifier: "ConfirmLinkAccountId", sender: self?.router)
+                    self?.dismiss(animated: true, completion: {
+                        self?.performSegue(withIdentifier: "ConfirmLinkAccountId", sender: nil)
+                    })
                     
                     }, scannerUICustomization: tapFullScreenCustomiser)
                 
