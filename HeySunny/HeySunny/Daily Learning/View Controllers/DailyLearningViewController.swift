@@ -10,10 +10,10 @@ import UIKit
 import XCoordinator
 
 class DailyLearningViewController: UIViewController {
-    let router: UnownedRouter<LearningRoute>
+    let router: StrongRouter<LearningRoute>
     private var tableViewHandler: TableViewHandler!
     
-    init(router: UnownedRouter<LearningRoute>) {
+    init(router: StrongRouter<LearningRoute>) {
         self.router = router
         
         super.init(nibName: nil, bundle: nil)
