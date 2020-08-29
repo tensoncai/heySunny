@@ -44,7 +44,6 @@ class SummaryVC: UIViewController, ChartViewDelegate, UITableViewDelegate , UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         lineChart.delegate = self
-        
         setupSegmentedControl()
         setupTable()
         setupLineChart()
@@ -96,21 +95,19 @@ class SummaryVC: UIViewController, ChartViewDelegate, UITableViewDelegate , UITa
     }
     
     private func setConstraints() {
-//        graph.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
-//        graph.heightAnchor.constraint(equalToConstant: 200).isActive = true
         lineChart.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
-        lineChart.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        lineChart.heightAnchor.constraint(equalToConstant: 150).isActive = true
 
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.heightAnchor.constraint(equalToConstant: 440).isActive = true
+        tableView.heightAnchor.constraint(equalToConstant: 330).isActive = true
         
-        stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+//        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+//        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+//        stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 //        stackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -430).isActive = true
         
-        stackView.setCustomSpacing(20, after: segmentedControl)
+//        stackView.setCustomSpacing(20, after: segmentedControl)
     }
     
     private func setupSegmentedControl() {
