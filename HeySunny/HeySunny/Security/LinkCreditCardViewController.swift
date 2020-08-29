@@ -15,6 +15,7 @@ import XCoordinator
 class LinkCreditCardViewController: UIViewController {
 
     var router: UnownedRouter<AppRoute>!
+    var bankCard: BankCard?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class LinkCreditCardViewController: UIViewController {
                     
                     let bankCardStorage = StorageFactory.getBankCardStorage()
                     
+                    self?.bankCard = bankCard
                     bankCardStorage.add(bankCard)
                     
                     self?.dismiss(animated: true, completion: {
@@ -54,6 +56,7 @@ class LinkCreditCardViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? LinkExternalAccountViewController {
             destinationVC.router = router
+            destinationVC.bankCard = bankCard
         }
     }
     

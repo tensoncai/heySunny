@@ -272,10 +272,10 @@
             </objects>
             <point key="canvasLocation" x="899" y="155"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirm Number View Controller-->
         <scene sceneID="EFP-vF-2Zx">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Xc9-Sy-rTy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmNumberId" modalPresentationStyle="fullScreen" id="Xc9-Sy-rTy" customClass="ConfirmNumberViewController" customModule="HeySunny" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n5Y-C8-Une">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -355,7 +355,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="actionGetStarted:" destination="Xc9-Sy-rTy" eventType="touchUpInside" id="hSc-hE-a17"/>
+                                    <action selector="actionSaveNumber:" destination="Xc9-Sy-rTy" eventType="touchUpInside" id="ghb-Ch-wZD"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="taO-a6-s12">
@@ -411,8 +411,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="actionGetStarted:" destination="lIO-ot-bRz" eventType="touchUpInside" id="4zY-VY-Dhx"/>
-                                    <segue destination="Xc9-Sy-rTy" kind="show" id="syn-Xv-Znm"/>
+                                    <segue destination="Xc9-Sy-rTy" kind="show" id="hR3-15-aqb"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2S-Vc-aAq" userLabel="BankCard">
@@ -613,7 +612,9 @@
                     <connections>
                         <outlet property="lblAmount" destination="Ocm-n2-G8J" id="blQ-iX-n3a"/>
                         <outlet property="lblDate" destination="I1o-2t-zHh" id="pfc-eb-oci"/>
+                        <outlet property="lblDate2" destination="F8b-HO-s2x" id="MRi-wW-TXa"/>
                         <outlet property="lblLastFourDigit" destination="uqt-VX-ZGk" id="oOy-eX-JWU"/>
+                        <outlet property="lblLastFourDigits2" destination="0Ha-71-jYZ" id="wcv-o0-rpt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2A-sn-gtJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
