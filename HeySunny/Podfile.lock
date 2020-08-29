@@ -3,6 +3,7 @@ PODS:
     - Charts/Core (= 3.5.0)
   - Charts/Core (3.5.0)
   - CommonDataModelsKit-iOS (1.0.31)
+  - lottie-ios (3.1.8)
   - M13Checkbox (3.4.0)
   - PayCardsRecognizer (1.1.7)
   - Permission (3.1.2):
@@ -21,6 +22,7 @@ PODS:
 
 DEPENDENCIES:
   - Charts
+  - lottie-ios
   - M13Checkbox
   - Permission (~> 3.1)
   - Permission/Camera
@@ -33,6 +35,7 @@ SPEC REPOS:
   trunk:
     - Charts
     - CommonDataModelsKit-iOS
+    - lottie-ios
     - M13Checkbox
     - PayCardsRecognizer
     - Permission
@@ -44,6 +47,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   CommonDataModelsKit-iOS: 4b1a33cd07686bcd8117f1f1ebe18373bda16af5
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
   PayCardsRecognizer: 2e4d1b2fdd5f1528fb56064a91e1d58a1af7a2db
   Permission: 4821359fb4d4367fb59aa16df38fbba5722ac842
@@ -52,6 +56,6 @@ SPEC CHECKSUMS:
   WeScan: fed582f6c38014d529afb5aa9ffd1bad38fc72b7
   XCoordinator: 9ee654fedef1ffede33d5c11677708a555c00542
 
-PODFILE CHECKSUM: 56fc5ad9b0e5d89b4bdc92bdcd7cdb108e761c5b
+PODFILE CHECKSUM: aa6e8f3e1304fe2d50afe3ea2eaffb369225ff16
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.8.4

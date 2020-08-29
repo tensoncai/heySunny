@@ -14,7 +14,7 @@ target 'HeySunny' do
   pod 'Permission/Camera'
   pod 'M13Checkbox'
   pod 'TapCardScanner-iOS', '~> 1.0'
-
+  pod 'lottie-ios'
 
   target 'HeySunnyTests' do
     inherit! :search_paths
